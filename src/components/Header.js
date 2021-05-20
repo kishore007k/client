@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { LogOut } from "../api/Auth";
 
 const Header = () => {
-	const user = useSelector((state) => state.userData?.loginUser);
+	const user = useSelector((state) => state.userData?.userData?.user);
 	const dispatch = useDispatch();
 
 	return (
@@ -36,8 +36,8 @@ const Header = () => {
 						<div>
 							<Link to="/profile">
 								<img
-									src={user?.data?.userImage}
-									alt={user?.data?.userName}
+									src={user?.userImage}
+									alt={user?.userName}
 									style={{ width: "5%", borderRadius: "50%" }}
 								/>
 							</Link>
@@ -47,7 +47,7 @@ const Header = () => {
 					)}
 				</ul>
 			</nav>
-			<div>{user ? <p>{user?.data?.email}</p> : <></>}</div>
+			<div>{user ? <p>{user?.email}</p> : <></>}</div>
 		</div>
 	);
 };

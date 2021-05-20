@@ -17,11 +17,17 @@ export const setUserDataReducer = (
 		case ActionTypes.USER_LOGIN:
 			return { ...state, loginUser: payload };
 		case ActionTypes.USER_LOGOUT:
-			return { ...state, userData: {}, loginUser: {}, registerUser: {} };
+			return {
+				...state,
+				userData: {},
+				loginUser: {},
+				registerUser: {},
+				message: {},
+			};
 		case ActionTypes.SET_USER_DATA:
 			return { ...state, userData: payload };
 		case ActionTypes.UPDATE_USER_DETAILS:
-			return { ...state, message: payload.message, userData: payload.data };
+			return { ...state, message: payload.message, userData: payload };
 		case ActionTypes.FORGOT_PASSWORD:
 			return { ...state, message: payload };
 		case ActionTypes.RESET_PASSWORD:

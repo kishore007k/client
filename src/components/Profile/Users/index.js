@@ -11,9 +11,21 @@ const UserProfile = () => {
 	const UserDataReducer = useSelector((state) => state.userData?.userData?.user);
 	const dispatch = useDispatch();
 
-	const [image, setImage] = useState(userData?.user?.userImage);
-	const [userName, setUserName] = useState(userData?.user?.userName);
-	const [phNumber, setPhNumber] = useState(userData?.user?.phoneNumber);
+	const [image, setImage] = useState(
+		UserDataReducer?.userImage
+			? UserDataReducer?.userImage
+			: userData?.user?.userImage
+	);
+	const [userName, setUserName] = useState(
+		UserDataReducer?.userName
+			? UserDataReducer?.userName
+			: userData?.user?.userName
+	);
+	const [phNumber, setPhNumber] = useState(
+		UserDataReducer?.phoneNumber
+			? UserDataReducer?.phoneNumber
+			: userData?.user?.phoneNumber
+	);
 
 	const id = localUserDataJson?.data?._id;
 	const localToken = localUserDataJson?.token;
@@ -46,7 +58,7 @@ const UserProfile = () => {
 					alt={
 						userName === UserDataReducer?.userName
 							? UserDataReducer?.userName
-							: image.name
+							: image?.name
 					}
 					style={{ width: "30%", margin: "50 auto", borderRadius: "50%" }}
 				/>

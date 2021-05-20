@@ -33,13 +33,12 @@ export const Login = ({ email, password, history, dispatch }) => {
 	axios
 		.post(`${URL}/api/users/signIn`, { email, password })
 		.then((res) => {
-			if (res.data) {
-				if (res.data.user.userRole === 1) {
-					history.push("/dashboard");
-					localStorage.setItem("user", JSON.stringify(res.data));
-					dispatch(loginUser(res.data));
-				}
+			if (res.data.user.role === 0) {
 				history.push("/");
+				localStorage.setItem("user", JSON.stringify(res.data));
+				dispatch(loginUser(res.data));
+			} else {
+				history.push("/dashboard");
 				localStorage.setItem("user", JSON.stringify(res.data));
 				dispatch(loginUser(res.data));
 			}
@@ -49,6 +48,7 @@ export const Login = ({ email, password, history, dispatch }) => {
 
 export const LogOut = ({ dispatch }) => {
 	dispatch(logoutUser());
+	localStorage.clear();
 };
 
 export const fetchUserDetail = ({ id, dispatch }) => {
