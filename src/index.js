@@ -12,6 +12,8 @@ import Dashboard from "./components/Dashboard/Dashboard";
 
 import { Provider } from "react-redux";
 import store from "./redux/index";
+import ResetPassword from "./components/ResetPassword";
+import ForgotPass from "./components/ForgotPass";
 
 ReactDOM.render(
 	<React.StrictMode>
@@ -24,6 +26,8 @@ ReactDOM.render(
 					<Route path="/profile" exact component={UserProfile} />
 					<Route path="/admin/profile" exact component={AdminProfile} />
 					<Route path="/dashboard" exact component={Dashboard} />
+					<Route path="/forgotPassword" exact component={ForgotPass} />
+					<Route path="/resetPassword" exact component={ResetPassword} />
 				</Switch>
 			</Router>
 		</Provider>

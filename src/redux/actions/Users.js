@@ -40,3 +40,17 @@ export const updateUser = (updatedUserData) => {
 		payload: updatedUserData,
 	};
 };
+
+export const forgotPassword = (message) => {
+	return {
+		type: ActionTypes.FORGOT_PASSWORD,
+		payload: message,
+	};
+};
+
+export const resetPassword = (message) => {
+	return {
+		type: ActionTypes.RESET_PASSWORD,
+		payload: message,
+	};
+};

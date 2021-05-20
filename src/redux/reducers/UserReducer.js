@@ -4,7 +4,7 @@ const INITIAL_STATE = {
 	registerUser: {},
 	loginUser: {},
 	userData: {},
-	updateMessage: {},
+	message: {},
 };
 
 export const setUserDataReducer = (
@@ -21,7 +21,11 @@ export const setUserDataReducer = (
 		case ActionTypes.SET_USER_DATA:
 			return { ...state, userData: payload };
 		case ActionTypes.UPDATE_USER_DETAILS:
-			return { ...state, updateMessage: payload.message, userData: payload.data };
+			return { ...state, message: payload.message, userData: payload.data };
+		case ActionTypes.FORGOT_PASSWORD:
+			return { ...state, message: payload };
+		case ActionTypes.RESET_PASSWORD:
+			return { ...state, message: payload };
 		default:
 			return state;
 	}

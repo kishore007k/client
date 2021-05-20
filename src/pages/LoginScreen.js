@@ -55,6 +55,9 @@ const LoginScreen = () => {
 				<br />
 				<button onClick={handleLogin}>Login</button>
 				<button onClick={handleLogout}>Log Out</button>
+				<span>
+					<a href="/forgotPassword">Forgot Password?</a>
+				</span>
 			</form>
 			<br />
 			<hr />
