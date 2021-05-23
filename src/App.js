@@ -1,14 +1,37 @@
 import React from "react";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import LandingScreen from "./pages/LandingScreen";
+import "./App.css";
+import Main from "./main";
+
+import SignUpScreen from "./pages/SignUpScreen";
+import LoginScreen from "./pages/LoginScreen";
+import UserProfile from "./components/Profile/Users";
+import AdminProfile from "./components/Profile/Admin";
+
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Dashboard from "./components/Dashboard/Dashboard";
+
+import { Provider } from "react-redux";
+import store from "./redux/index";
+import ResetPassword from "./components/ResetPassword";
+import ForgotPass from "./components/ForgotPass";
 
 const App = () => {
 	return (
 		<div>
-			<Header />
-			<LandingScreen />
-			<Footer />
+			<Provider store={store}>
+				<Router>
+					<Switch>
+						<Route path="/" exact component={Main} />
+						<Route path="/signUp" exact component={SignUpScreen} />
+						<Route path="/login" exact component={LoginScreen} />
+						<Route path="/profile" exact component={UserProfile} />
+						<Route path="/admin/profile" exact component={AdminProfile} />
+						<Route path="/dashboard" exact component={Dashboard} />
+						<Route path="/forgotPassword" exact component={ForgotPass} />
+						<Route path="/resetPassword" exact component={ResetPassword} />
+					</Switch>
+				</Router>
+			</Provider>
 		</div>
 	);
 };

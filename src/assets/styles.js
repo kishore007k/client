@@ -1,0 +1,37 @@
+export const COLORS = {
+	primary: "#8E9AFF",
+	secondary: "#FF89C2",
+	paymentGradient:
+		"linear-gradient(164.37deg, #333B50 -16.32%, #232837 114.33%)",
+	white: "#FFFFFF",
+	darkBlack: "#303030",
+	lightBlack: "#646464",
+	mediumBlack: "#515151",
+	star: "#FBC02D",
+	black: "#000000",
+	grayIcon: "#D9D9D9",
+	lightGreyText: "#F6F6F6",
+	orangeBtn: "#FF8C4B",
+	BgShade: "#F6F5FF",
+	rainbowColor:
+		"linear-gradient(90.07deg, #FF7676 0.35%, #FFC288 9.54%, #FFD88D 20.6%, #E6FFA0 28.76%, #A3FF94 37.45%, #C2FFED 45.36%, #D6FFFF 54.61%, #AEE2FF 64.61%, #A7B0FF 73.04%, #FF89C2 83.07%, #FF7474 92.82%)",
+	circle: "#C7FFF8",
+	profileNav: "#FF7474",
+	status: "#40D146",
+	activeStatus: "#FF7474",
+	darkGrey: "#C8C8C8",
+	input: "#FFDBBA",
+	bubble: "#FF5F00",
+	bubbleBg: "#FFA5A5",
+	cartBg: "#F8F8F8",
+	profileDesignLayer1: "#DBDAFF",
+	profileDesignLayer2: "#E8E8FF",
+	filterBtn: "#FF9A61",
+	greyIconDark: "#9C9C9C",
+	adminPanelBg: "#EEF0F7",
+	adminActiveIconColor: "#DDDCFF",
+	gitHubLinks: "#2D98FF",
+	gitHubGo: "#00ADD8",
+};
+
+export const FONTS = {};
