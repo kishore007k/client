@@ -14,6 +14,9 @@ import { Provider } from "react-redux";
 import store from "./redux/index";
 import ResetPassword from "./components/ResetPassword";
 import ForgotPass from "./components/ForgotPass";
+import ProductScreen from "./pages/ProductScreen";
+import AboutScreen from "./pages/AboutScreen";
+import ContactScreen from "./pages/ContactScreen";
 
 const App = () => {
 	return (
@@ -29,6 +32,9 @@ const App = () => {
 						<Route path="/dashboard" exact component={Dashboard} />
 						<Route path="/forgotPassword" exact component={ForgotPass} />
 						<Route path="/resetPassword" exact component={ResetPassword} />
+						<Route path="/products" exact component={ProductScreen} />
+						<Route path="/about" exact component={AboutScreen} />
+						<Route path="/contact" exact component={ContactScreen} />
 					</Switch>
 				</Router>
 			</Provider>

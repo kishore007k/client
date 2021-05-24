@@ -14,8 +14,8 @@ const LandingScreen = () => {
 	}, [id, dispatch]);
 
 	return (
-		<div>
-			<h2>This is the LandingScreen</h2>
+		<div style={{ marginTop: "80px" }}>
+			<h2 style={{ fontSize: "40px" }}>This is the LandingScreen</h2>
 		</div>
 	);
 };

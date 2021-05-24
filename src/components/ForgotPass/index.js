@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { forgotPass } from "../api/Auth";
+import { forgotPass } from "../../api/Auth";
 
 const ForgotPass = () => {
 	const [email, setEmail] = useState("");

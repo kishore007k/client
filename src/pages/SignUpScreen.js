@@ -40,7 +40,6 @@ const SignUpScreen = () => {
 					onChange={(e) => setUserName(e.target.value)}
 					value={userName}
 				/>
-				<br />
 				<label>Email</label>
 				<input
 					type="email"
@@ -49,7 +48,6 @@ const SignUpScreen = () => {
 					onChange={(e) => setEmail(e.target.value)}
 					value={email}
 				/>
-				<br />
 				<label>Password</label>
 				<input
 					type="password"
@@ -58,7 +56,6 @@ const SignUpScreen = () => {
 					onChange={(e) => setPassword(e.target.value)}
 					value={password}
 				/>
-				<br />
 				<label>Confirm Password</label>
 				<input
 					type="password"
@@ -67,8 +64,6 @@ const SignUpScreen = () => {
 					onChange={(e) => setCPassword(e.target.value)}
 					value={cPassword}
 				/>
-				<br />
-				<br />
 				<button onClick={handleSignUp}>Sign Up</button>
 			</form>
 			<Footer />

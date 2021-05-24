@@ -34,4 +34,25 @@ export const COLORS = {
 	gitHubGo: "#00ADD8",
 };
 
-export const FONTS = {};
+export const FONTS = {
+	fontSize: {
+		H1: "40px",
+		H2: "32px",
+		title: "20px",
+		subTitle: "18px",
+		para: "16px",
+		mediumText: "14px",
+		smallText: "12px",
+		verySmall: "8px",
+	},
+	fontWeight: {
+		bold: "700",
+		semiBold: "600",
+		medium: "500",
+		regular: "300",
+	},
+	fontFamily: {
+		primary: `'Source Sans Pro', sans-serif`,
+		secondary: `'Source Code Pro', monospace`,
+	},
+};

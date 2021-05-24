@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { resetPass } from "../api/Auth";
+import { resetPass } from "../../api/Auth";
 import { useDispatch } from "react-redux";
 
 const ResetPassword = () => {
