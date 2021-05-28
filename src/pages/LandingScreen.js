@@ -5,6 +5,7 @@ import { fetchUserDetail } from "../api/Auth";
 // Styles
 import styled from "styled-components";
 import ImageSlider from "../components/ImageSlider";
+import ProductCard from "../components/ProductCard";
 
 const LandingScreen = () => {
 	const localUserDataJson = JSON.parse(localStorage.getItem("user"));
@@ -20,6 +21,8 @@ const LandingScreen = () => {
 		<Wrapper>
 			{/* Slider */}
 			<ImageSlider />
+			{/* Products as Card */}
+			<ProductCard />
 		</Wrapper>
 	);
 };

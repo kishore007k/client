@@ -7,6 +7,7 @@ import "swiper/components/effect-flip/effect-flip.min.css";
 import "swiper/components/pagination/pagination.min.css";
 import "swiper/components/navigation/navigation.min.css";
 
+// Product Images
 import PicOne from "../../assets/images/slide/pic1.jpg";
 import PicTwo from "../../assets/images/slide/pic2.jpg";
 import PicThree from "../../assets/images/slide/pic3.jpg";
