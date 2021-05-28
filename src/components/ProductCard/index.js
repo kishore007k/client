@@ -4,6 +4,7 @@ import {
 	CardContainer,
 	CardDesc,
 	CardDetails,
+	CardImage,
 	CardPrice,
 	CardStars,
 	CardStat,
@@ -124,9 +125,9 @@ const ProductCard = () => {
 		<CardContainer>
 			{data.map((item, index) => (
 				<Card key={index}>
-					<div>
-						<img src={item.image} alt={item.title} style={{ width: "400px" }} />
-					</div>
+					<CardImage>
+						<img src={item.image} alt={item.title} />
+					</CardImage>
 					<div>
 						<CardDetails>
 							<CardTitle>{item.title}</CardTitle>

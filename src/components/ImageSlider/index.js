@@ -1,11 +1,8 @@
 import React from "react";
+
+// Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper/core";
-
-import "swiper/swiper.min.css";
-import "swiper/components/effect-flip/effect-flip.min.css";
-import "swiper/components/pagination/pagination.min.css";
-import "swiper/components/navigation/navigation.min.css";
 
 // Product Images
 import PicOne from "../../assets/images/slide/pic1.jpg";
@@ -13,20 +10,29 @@ import PicTwo from "../../assets/images/slide/pic2.jpg";
 import PicThree from "../../assets/images/slide/pic3.jpg";
 import PicFour from "../../assets/images/slide/pic4.jpg";
 
+// Styles
 import {
+	Content,
 	ContentContainer,
-	PAddToCartBtn,
 	PButtonContainer,
-	PBuyNowBtn,
 	PDesc,
 	PPrice,
 	PStat,
 	PTitle,
 	Wrapper,
 } from "./style";
+import BuyNowBtn from "../../utils/BuyNowBtn";
+import AddToCartBtn from "../../utils/AddToCartBtn";
 
+// Icons
 import ActiveStarIcon from "../../assets/icons/ActiveStarIcon";
 import InActiveStarIcon from "../../assets/icons/InActiveStarIcon";
+
+// Styles for swiper
+import "swiper/swiper.min.css";
+import "swiper/components/effect-flip/effect-flip.min.css";
+import "swiper/components/pagination/pagination.min.css";
+import "swiper/components/navigation/navigation.min.css";
 
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
@@ -82,7 +88,7 @@ const ImageSlider = () => {
 							<div>
 								<img src={item.image} alt={item.title} style={{ width: "580px" }} />
 							</div>
-							<div>
+							<Content>
 								<PTitle>{item.title}</PTitle>
 								<PDesc>{item.desc}</PDesc>
 								<PStat>
@@ -97,10 +103,10 @@ const ImageSlider = () => {
 								</PStat>
 								<PPrice>{item.price}</PPrice>
 								<PButtonContainer>
-									<PBuyNowBtn>Buy Now</PBuyNowBtn>
-									<PAddToCartBtn>Add to Cart</PAddToCartBtn>
+									<BuyNowBtn>Buy Now</BuyNowBtn>
+									<AddToCartBtn>Add to Cart</AddToCartBtn>
 								</PButtonContainer>
-							</div>
+							</Content>
 						</ContentContainer>
 					</Wrapper>
 				</SwiperSlide>

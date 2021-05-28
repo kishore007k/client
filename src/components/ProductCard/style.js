@@ -16,6 +16,20 @@ export const Card = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	cursor: pointer;
+	transition: 0.5s ease-in all;
+
+	:hover {
+		box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+		border-radius: 2px;
+	}
+`;
+
+export const CardImage = styled.div`
+	img {
+		width: 400px;
+		padding-top: 10px;
+	}
 `;
 
 export const CardDetails = styled.div`

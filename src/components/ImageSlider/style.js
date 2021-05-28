@@ -35,6 +35,10 @@ export const ContentContainer = styled.div`
 	z-index: 1;
 `;
 
+export const Content = styled.div`
+	margin-left: 20px;
+`;
+
 export const PTitle = styled.h3`
 	font-size: ${FONTS.fontSize.H2};
 	font-weight: ${FONTS.fontWeight.semiBold};
@@ -90,31 +94,6 @@ export const PButtonContainer = styled.div`
 	margin: 10px;
 
 	button {
-		border: none;
 		outline: none;
 	}
-`;
-
-export const PBuyNowBtn = styled.button`
-	background-color: ${COLORS.primary};
-	padding: 10px 25px;
-	border-radius: 50px;
-
-	color: ${COLORS.white};
-	font-size: ${FONTS.fontSize.subTitle};
-	font-weight: ${FONTS.fontWeight.medium};
-	position: relative;
-	box-shadow: 0px 10px 20px rgba(142, 154, 255, 0.5);
-`;
-
-export const PAddToCartBtn = styled.button`
-	background-color: ${COLORS.secondary};
-	padding: 10px 25px;
-	border-radius: 50px;
-
-	color: ${COLORS.white};
-	font-size: ${FONTS.fontSize.subTitle};
-	font-weight: ${FONTS.fontWeight.medium};
-	position: relative;
-	box-shadow: 0px 10px 20px rgba(255, 137, 194, 0.5);
 `;
