@@ -2,9 +2,12 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchUserDetail } from "../api/Auth";
 
+// Styles
+import styled from "styled-components";
+import ImageSlider from "../components/ImageSlider";
+
 const LandingScreen = () => {
 	const localUserDataJson = JSON.parse(localStorage.getItem("user"));
-
 	const dispatch = useDispatch();
 
 	const id = localUserDataJson?.data?._id;
@@ -14,10 +17,17 @@ const LandingScreen = () => {
 	}, [id, dispatch]);
 
 	return (
-		<div style={{ marginTop: "80px" }}>
-			<h2 style={{ fontSize: "40px" }}>This is the LandingScreen</h2>
-		</div>
+		<Wrapper>
+			{/* Slider */}
+			<ImageSlider />
+		</Wrapper>
 	);
 };
 
 export default LandingScreen;
+
+const Wrapper = styled.div`
+	margin-top: 80px;
+	width: 100%;
+	height: 100%;
+`;

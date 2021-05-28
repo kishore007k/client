@@ -75,6 +75,9 @@ const LoginScreen = () => {
 								value={password}
 							/>
 						</InputContainer>
+						<ForgotSpan>
+							<Link to="/forgotPassword">Forgot Password?</Link>
+						</ForgotSpan>
 						<ActionContainer>
 							<ActionButton onClick={handleLogin}>Sign In</ActionButton>
 							<GoogleBtn onClick={handleGoogleLogin}>
@@ -84,9 +87,6 @@ const LoginScreen = () => {
 							<Span>
 								<Link to="/signUp">Don't you have an Account? Sign Up</Link>
 							</Span>
-							<ForgotSpan>
-								<Link to="/forgotPassword">Forgot Password?</Link>
-							</ForgotSpan>
 						</ActionContainer>
 					</LoginForm>
 				</Wrapper>

@@ -4,7 +4,7 @@ import { COLORS, FONTS } from "../assets/styles";
 export const Title = styled.h1`
 	text-align: center;
 	color: ${COLORS.white};
-	font-size: ${FONTS.fontSize.H1};
+	font-size: ${FONTS.fontSize.H2};
 	font-weight: ${FONTS.fontWeight.bold};
 	font-family: ${FONTS.fontFamily.secondary};
 	margin: 20px 0px;
@@ -34,7 +34,7 @@ export const FormLabel = styled.label`
 
 export const FormInput = styled.input`
 	width: 450px;
-	height: 50px;
+	height: 40px;
 	border: none;
 	outline: none;
 	border-radius: 10px;
@@ -92,7 +92,7 @@ export const GoogleBtn = styled.button`
 	outline: none;
 	border: none;
 	background-color: ${COLORS.white};
-	margin: 20px 0px;
+	margin: 15px 0px;
 	border-radius: 10px;
 	cursor: pointer;
 `;
@@ -107,7 +107,7 @@ export const GoogleText = styled.p`
 `;
 
 export const Span = styled.span`
-	margin: 15px 0px;
+	margin: 10px 0px;
 
 	a {
 		color: ${COLORS.white};
@@ -119,7 +119,7 @@ export const Span = styled.span`
 `;
 
 export const ForgotSpan = styled.span`
-	margin: 20px 0px;
+	margin-top: 10px;
 	cursor: pointer;
 
 	a {
@@ -174,5 +174,23 @@ export const SendBtn = styled.button`
 		top: 40px;
 		background: rgba(255, 140, 75, 0.3);
 		filter: blur(15px);
+	}
+`;
+
+export const PasswordInput = styled.input`
+	width: 200px;
+	height: 40px;
+	border: none;
+	outline: none;
+	border-radius: 10px;
+	padding: 5px 10px;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+	font-size: ${FONTS.fontSize.para};
+	letter-spacing: 0.05em;
+
+	::placeholder {
+		color: ${COLORS.mediumBlack};
+		font-size: ${FONTS.fontSize.para};
+		font-family: ${FONTS.fontFamily.secondary};
 	}
 `;
