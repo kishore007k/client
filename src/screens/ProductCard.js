@@ -1,25 +1,12 @@
 import React from "react";
-import {
-	Card,
-	CardContainer,
-	CardDesc,
-	CardDetails,
-	CardImage,
-	CardPrice,
-	CardStars,
-	CardStat,
-	CardTitle,
-	Stat,
-} from "./style";
-
-import ActiveStarIcon from "../../assets/icons/ActiveStarIcon";
-import InActiveStarIcon from "../../assets/icons/InActiveStarIcon";
+import styled from "styled-components";
 
 // Product Images
-import PicOne from "../../assets/images/slide/pic1.jpg";
-import PicTwo from "../../assets/images/slide/pic2.jpg";
-import PicThree from "../../assets/images/slide/pic3.jpg";
-import PicFour from "../../assets/images/slide/pic4.jpg";
+import PicOne from "../assets/images/slide/pic1.jpg";
+import PicTwo from "../assets/images/slide/pic2.jpg";
+import PicThree from "../assets/images/slide/pic3.jpg";
+import PicFour from "../assets/images/slide/pic4.jpg";
+import Card from "../components/Card";
 
 const data = [
 	{
@@ -124,31 +111,27 @@ const ProductCard = () => {
 	return (
 		<CardContainer>
 			{data.map((item, index) => (
-				<Card key={index}>
-					<CardImage>
-						<img src={item.image} alt={item.title} />
-					</CardImage>
-					<div>
-						<CardDetails>
-							<CardTitle>{item.title}</CardTitle>
-							<CardStars>
-								<ActiveStarIcon />
-								<ActiveStarIcon />
-								<ActiveStarIcon />
-								<ActiveStarIcon />
-								<InActiveStarIcon />
-							</CardStars>
-						</CardDetails>
-						<CardDesc>{item.desc}</CardDesc>
-						<CardStat>
-							<Stat>{item.stat}</Stat>
-							<CardPrice>{item.price}</CardPrice>
-						</CardStat>
-					</div>
-				</Card>
+				<Card
+					image={item.image}
+					title={item.title}
+					stat={item.stat}
+					price={item.price}
+					desc={item.desc}
+					key={index}
+				/>
 			))}
 		</CardContainer>
 	);
 };
 
 export default ProductCard;
+
+const CardContainer = styled.div`
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 20px;
+	grid-area: auto;
+	grid-auto-flow: dense;
+	width: 1300px;
+	margin: 60px auto;
+`;

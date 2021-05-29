@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-
-import TwitterIcon from "../../assets/icons/TwitterIcon";
-import InstagramIcon from "../../assets/icons/InstagramIcon";
-import FacebookIcon from "../../assets/icons/FacebookIcon";
-import LinkedInIcon from "../../assets/icons/LinkedInIcon";
+import {
+	TwitterIcon,
+	InstagramIcon,
+	FacebookIcon,
+	LinkedInIcon,
+} from "../../assets/icons/SocialIcons";
 import {
 	BottomDiv,
 	FooterWrapper,

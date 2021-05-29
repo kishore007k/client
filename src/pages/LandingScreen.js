@@ -4,9 +4,13 @@ import { fetchUserDetail } from "../api/Auth";
 
 // Styles
 import styled from "styled-components";
+
+// Components
 import ImageSlider from "../components/ImageSlider";
-import ProductCard from "../components/ProductCard";
+import ProductCard from "../screens/ProductCard";
 import DetailsView from "../screens/DetailsView";
+import CompaniesSection from "../screens/CompaniesSection";
+import RecentlyViewed from "../screens/RecentlyViewed";
 
 const LandingScreen = () => {
 	const localUserDataJson = JSON.parse(localStorage.getItem("user"));
@@ -26,6 +30,10 @@ const LandingScreen = () => {
 			<ProductCard />
 			{/* Details View */}
 			<DetailsView />
+			{/* Companies */}
+			<CompaniesSection />
+			{/* Recent Items */}
+			<RecentlyViewed />
 		</Wrapper>
 	);
 };
@@ -36,4 +44,5 @@ const Wrapper = styled.div`
 	margin-top: 80px;
 	width: 100%;
 	height: 100%;
+	overflow: hidden;
 `;

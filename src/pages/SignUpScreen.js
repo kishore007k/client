@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 // Image
 import BgImage from "../assets/images/bgImage.jpg";
-import GoogleIcon from "../assets/icons/GoogleIcon";
+import { GoogleIcon } from "../assets/icons/SocialIcons";
 
 // Styles
 import styled from "styled-components";

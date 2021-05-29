@@ -12,16 +12,22 @@ import {
 	Container,
 	LoginBtn,
 	Btn,
+	ProfileContainer,
+	LogoutBtn,
 } from "./styles";
 
 // Images
 import logo from "../../assets/images/logoPrimary.png";
 import search from "../../assets/images/search.png";
 import cart from "../../assets/images/Cart.png";
+import { AdminPanelIcon } from "../../assets/icons";
+import { COLORS } from "../../assets/styles";
 
 const Header = () => {
 	const user = useSelector((state) => state.userData?.userData?.user);
 	const dispatch = useDispatch();
+
+	console.log(user);
 
 	return (
 		<HeaderWrapper>
@@ -61,16 +67,21 @@ const Header = () => {
 							<Link to="/login">Login</Link>
 						</LoginBtn>
 					) : (
-						<div>
+						<ProfileContainer>
+							{user.userRole === 1 && (
+								<Link to="/dashboard">
+									<AdminPanelIcon color={COLORS.primary} />
+								</Link>
+							)}
 							<Link to="/profile">
 								<img
 									src={user?.userImage}
 									alt={user?.userName}
-									style={{ width: "5%", borderRadius: "50%" }}
+									style={{ width: "100%", borderRadius: "50%" }}
 								/>
 							</Link>
-							<button onClick={() => LogOut({ dispatch })}>Logout</button>
-						</div>
+							<LogoutBtn onClick={() => LogOut({ dispatch })}>Logout</LogoutBtn>
+						</ProfileContainer>
 					)}
 				</Actions>
 			</Container>

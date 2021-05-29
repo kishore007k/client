@@ -1,17 +1,7 @@
 import styled from "styled-components";
 import { COLORS, FONTS } from "../../assets/styles";
 
-export const CardContainer = styled.div`
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-gap: 20px;
-	grid-area: auto;
-	grid-auto-flow: dense;
-	width: 1300px;
-	margin: 60px auto;
-`;
-
-export const Card = styled.div`
+export const CardCard = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

@@ -32,7 +32,15 @@ export const ContentContainer = styled.div`
 	height: 390px;
 	display: flex;
 	align-items: center;
+	transform: translate(50%, 25%);
 	z-index: 1;
+`;
+
+export const Image = styled.div`
+	img {
+		width: 580px;
+		box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+	}
 `;
 
 export const Content = styled.div`
@@ -42,7 +50,7 @@ export const Content = styled.div`
 export const PTitle = styled.h3`
 	font-size: ${FONTS.fontSize.H2};
 	font-weight: ${FONTS.fontWeight.semiBold};
-	color: ${COLORS.white};
+	color: ${COLORS.lightGreyText};
 	margin-left: 10px;
 	margin-bottom: 10px;
 `;
@@ -51,7 +59,7 @@ export const PDesc = styled.p`
 	font-size: ${FONTS.fontSize.subTitle};
 	font-weight: ${FONTS.fontWeight.regular};
 	letter-spacing: 0.05em;
-	color: ${COLORS.white};
+	color: ${COLORS.lightGreyText};
 	margin-left: 10px;
 	margin-bottom: 30px;
 `;

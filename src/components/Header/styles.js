@@ -70,6 +70,9 @@ export const Nav = styled.nav`
 
 export const Actions = styled.div`
 	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 25%;
 
 	button {
 		margin: 0 10px;
@@ -105,4 +108,34 @@ export const Btn = styled.button`
 	border: none;
 	outline: none;
 	background: none;
+`;
+
+export const ProfileContainer = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	a {
+		width: 30px;
+		margin: 0px 12px;
+	}
+`;
+
+export const LogoutBtn = styled.button`
+	border: 1px solid ${COLORS.primary};
+	border-radius: 50px;
+	background: none;
+	padding: 5px 25px;
+	cursor: pointer;
+	transition: 0.5s ease-in-out all;
+	font-size: ${FONTS.fontSize.title};
+	font-weight: ${FONTS.fontWeight.semiBold};
+	text-decoration: none;
+	color: ${COLORS.primary};
+	transition: 0.5s ease-in-out all;
+
+	:hover {
+		color: ${COLORS.white};
+		background: ${COLORS.primary};
+	}
 `;

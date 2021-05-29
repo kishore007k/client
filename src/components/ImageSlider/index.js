@@ -1,8 +1,10 @@
 import React from "react";
 
 // Swiper
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper/core";
+import Slider from "react-slick";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 // Product Images
 import PicOne from "../../assets/images/slide/pic1.jpg";
@@ -20,21 +22,13 @@ import {
 	PStat,
 	PTitle,
 	Wrapper,
+	Image,
 } from "./style";
 import BuyNowBtn from "../../utils/BuyNowBtn";
 import AddToCartBtn from "../../utils/AddToCartBtn";
 
 // Icons
-import ActiveStarIcon from "../../assets/icons/ActiveStarIcon";
-import InActiveStarIcon from "../../assets/icons/InActiveStarIcon";
-
-// Styles for swiper
-import "swiper/swiper.min.css";
-import "swiper/components/effect-flip/effect-flip.min.css";
-import "swiper/components/pagination/pagination.min.css";
-import "swiper/components/navigation/navigation.min.css";
-
-SwiperCore.use([Autoplay, Pagination, Navigation]);
+import { ActiveStarIcon, InActiveStarIcon } from "../../assets/icons";
 
 const data = [
 	{
@@ -71,23 +65,29 @@ const data = [
 	},
 ];
 
+const settings = {
+	dots: true,
+	infinite: true,
+	fade: true,
+	speed: 2000,
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	lazyLoad: true,
+	autoplay: true,
+	autoplaySpeed: 5000,
+	pauseOnHover: true,
+};
+
 const ImageSlider = () => {
 	return (
-		<Swiper
-			spaceBetween={30}
-			centeredSlides={true}
-			pagination={{
-				clickable: true,
-			}}
-			navigation={false}
-		>
+		<Slider {...settings}>
 			{data.map((item, index) => (
-				<SwiperSlide>
-					<Wrapper bgImage={item.image}>
+				<Wrapper bgImage={item.image} key={index}>
+					<div>
 						<ContentContainer>
-							<div>
-								<img src={item.image} alt={item.title} style={{ width: "580px" }} />
-							</div>
+							<Image>
+								<img src={item.image} alt={item.title} />
+							</Image>
 							<Content>
 								<PTitle>{item.title}</PTitle>
 								<PDesc>{item.desc}</PDesc>
@@ -108,10 +108,10 @@ const ImageSlider = () => {
 								</PButtonContainer>
 							</Content>
 						</ContentContainer>
-					</Wrapper>
-				</SwiperSlide>
+					</div>
+				</Wrapper>
 			))}
-		</Swiper>
+		</Slider>
 	);
 };
 
