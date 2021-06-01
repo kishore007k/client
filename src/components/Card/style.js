@@ -69,3 +69,10 @@ export const CardPrice = styled.h3`
 	font-size: ${FONTS.fontSize.subTitle};
 	font-weight: ${FONTS.fontWeight.semiBold};
 `;
+
+export const CardReviewCount = styled.span`
+	color: ${COLORS.lightBlack};
+	font-size: ${FONTS.fontSize.smallText};
+	font-weight: ${FONTS.fontWeight.regular};
+	font-family: ${FONTS.fontFamily.secondary};
+`;

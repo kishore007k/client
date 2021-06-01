@@ -13,8 +13,6 @@ export const COLORS = {
 	lightGreyText: "#F6F6F6",
 	orangeBtn: "#FF8C4B",
 	BgShade: "#F6F5FF",
-	rainbowColor:
-		"linear-gradient(90.07deg, #FF7676 0.35%, #FFC288 9.54%, #FFD88D 20.6%, #E6FFA0 28.76%, #A3FF94 37.45%, #C2FFED 45.36%, #D6FFFF 54.61%, #AEE2FF 64.61%, #A7B0FF 73.04%, #FF89C2 83.07%, #FF7474 92.82%)",
 	circle: "#C7FFF8",
 	profileNav: "#FF7474",
 	status: "#40D146",

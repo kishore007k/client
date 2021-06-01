@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 // Product Images
 import PicOne from "../assets/images/slide/pic1.jpg";
@@ -11,99 +12,123 @@ import Card from "../components/Card";
 const data = [
 	{
 		title: "ROG Strix GT 4X",
-		image: PicOne,
+		image: [PicOne, PicTwo, PicThree],
 		desc:
 			"Some Desc about the product and some features that this product has and how much it will be useful",
 		stat: "Best Selling",
 		price: "₹4400",
+		stars: 4,
+		reviewCount: 4201,
 	},
 	{
 		title: "ROG Strix GT 4X",
-		image: PicTwo,
+		image: [PicTwo, PicFour, PicThree],
 		desc:
 			"Some Desc about the product and some features that this product has and how much it will be useful",
 		stat: "Best Selling",
 		price: "₹4400",
+		stars: 4,
+		reviewCount: 4201,
 	},
 	{
 		title: "ROG Strix GT 4X",
-		image: PicThree,
+		image: [PicThree, PicTwo, PicFour],
 		desc:
 			"Some Desc about the product and some features that this product has and how much it will be useful",
 		stat: "Best Selling",
 		price: "₹4400",
+		stars: 4,
+		reviewCount: 4201,
 	},
 	{
 		title: "ROG Strix GT 4X",
-		image: PicFour,
+		image: [PicFour, PicTwo, PicThree],
 		desc:
 			"Some Desc about the product and some features that this product has and how much it will be useful",
 		stat: "Best Selling",
 		price: "₹4400",
+		stars: 4,
+		reviewCount: 4201,
 	},
 	{
 		title: "ROG Strix GT 4X",
-		image: PicOne,
+		image: [PicOne, PicTwo, PicThree],
 		desc:
 			"Some Desc about the product and some features that this product has and how much it will be useful",
 		stat: "Best Selling",
 		price: "₹4400",
+		stars: 4,
+		reviewCount: 4201,
 	},
 	{
 		title: "ROG Strix GT 4X",
-		image: PicTwo,
+		image: [PicTwo, PicFour, PicThree],
 		desc:
 			"Some Desc about the product and some features that this product has and how much it will be useful",
 		stat: "Best Selling",
 		price: "₹4400",
+		stars: 4,
+		reviewCount: 4201,
 	},
 	{
 		title: "ROG Strix GT 4X",
-		image: PicThree,
+		image: [PicThree, PicTwo, PicFour],
 		desc:
 			"Some Desc about the product and some features that this product has and how much it will be useful",
 		stat: "Best Selling",
 		price: "₹4400",
+		stars: 4,
+		reviewCount: 4201,
 	},
 	{
 		title: "ROG Strix GT 4X",
-		image: PicFour,
+		image: [PicFour, PicTwo, PicThree],
 		desc:
 			"Some Desc about the product and some features that this product has and how much it will be useful",
 		stat: "Best Selling",
 		price: "₹4400",
+		stars: 4,
+		reviewCount: 4201,
 	},
 	{
 		title: "ROG Strix GT 4X",
-		image: PicOne,
+		image: [PicOne, PicTwo, PicThree],
 		desc:
 			"Some Desc about the product and some features that this product has and how much it will be useful",
 		stat: "Best Selling",
 		price: "₹4400",
+		stars: 4,
+		reviewCount: 4201,
 	},
 	{
 		title: "ROG Strix GT 4X",
-		image: PicTwo,
+		image: [PicTwo, PicFour, PicThree],
 		desc:
 			"Some Desc about the product and some features that this product has and how much it will be useful",
 		stat: "Best Selling",
 		price: "₹4400",
+		stars: 4,
+		reviewCount: 4201,
 	},
 	{
 		title: "ROG Strix GT 4X",
-		image: PicThree,
+		image: [PicThree, PicTwo, PicFour],
 		desc:
 			"Some Desc about the product and some features that this product has and how much it will be useful",
 		stat: "Best Selling",
 		price: "₹4400",
+		stars: 4,
+		reviewCount: 4201,
 	},
 	{
 		title: "ROG Strix GT 4X",
-		image: PicFour,
+		image: [PicFour, PicTwo, PicThree],
 		desc:
 			"Some Desc about the product and some features that this product has and how much it will be useful",
 		stat: "Best Selling",
 		price: "₹4400",
+		stars: 4,
+		reviewCount: 4201,
 	},
 ];
 
@@ -111,14 +136,20 @@ const ProductCard = () => {
 	return (
 		<CardContainer>
 			{data.map((item, index) => (
-				<Card
-					image={item.image}
-					title={item.title}
-					stat={item.stat}
-					price={item.price}
-					desc={item.desc}
+				<Link
+					to={{ pathname: `/products/${item.title}`, state: { product: item } }}
 					key={index}
-				/>
+				>
+					<Card
+						image={item.image[0]}
+						title={item.title}
+						stars={item.stars}
+						stat={item.stat}
+						reviewCount={item.reviewCount}
+						price={item.price}
+						desc={item.desc}
+					/>
+				</Link>
 			))}
 		</CardContainer>
 	);
@@ -134,4 +165,8 @@ const CardContainer = styled.div`
 	grid-auto-flow: dense;
 	width: 1300px;
 	margin: 60px auto;
+
+	a {
+		text-decoration: none;
+	}
 `;

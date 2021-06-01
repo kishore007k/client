@@ -17,35 +17,123 @@ import { COLORS, FONTS } from "../assets/styles";
 const data = [
 	{
 		title: "ROG Strix GT 4X",
-		image: PicOne,
+		image: [PicOne, PicTwo, PicThree],
 		desc:
 			"Some Desc about the product and some features that this product has and how much it will be useful",
 		stat: "Best Selling",
 		price: "₹4400",
+		stars: 4,
+		reviewCount: 4201,
 	},
 	{
 		title: "ROG Strix GT 4X",
-		image: PicTwo,
+		image: [PicTwo, PicFour, PicThree],
 		desc:
 			"Some Desc about the product and some features that this product has and how much it will be useful",
 		stat: "Best Selling",
 		price: "₹4400",
+		stars: 4,
+		reviewCount: 4201,
 	},
 	{
 		title: "ROG Strix GT 4X",
-		image: PicThree,
+		image: [PicThree, PicTwo, PicFour],
 		desc:
 			"Some Desc about the product and some features that this product has and how much it will be useful",
 		stat: "Best Selling",
 		price: "₹4400",
+		stars: 4,
+		reviewCount: 4201,
 	},
 	{
 		title: "ROG Strix GT 4X",
-		image: PicFour,
+		image: [PicFour, PicTwo, PicThree],
 		desc:
 			"Some Desc about the product and some features that this product has and how much it will be useful",
 		stat: "Best Selling",
 		price: "₹4400",
+		stars: 4,
+		reviewCount: 4201,
+	},
+	{
+		title: "ROG Strix GT 4X",
+		image: [PicOne, PicTwo, PicThree],
+		desc:
+			"Some Desc about the product and some features that this product has and how much it will be useful",
+		stat: "Best Selling",
+		price: "₹4400",
+		stars: 4,
+		reviewCount: 4201,
+	},
+	{
+		title: "ROG Strix GT 4X",
+		image: [PicTwo, PicFour, PicThree],
+		desc:
+			"Some Desc about the product and some features that this product has and how much it will be useful",
+		stat: "Best Selling",
+		price: "₹4400",
+		stars: 4,
+		reviewCount: 4201,
+	},
+	{
+		title: "ROG Strix GT 4X",
+		image: [PicThree, PicTwo, PicFour],
+		desc:
+			"Some Desc about the product and some features that this product has and how much it will be useful",
+		stat: "Best Selling",
+		price: "₹4400",
+		stars: 4,
+		reviewCount: 4201,
+	},
+	{
+		title: "ROG Strix GT 4X",
+		image: [PicFour, PicTwo, PicThree],
+		desc:
+			"Some Desc about the product and some features that this product has and how much it will be useful",
+		stat: "Best Selling",
+		price: "₹4400",
+		stars: 4,
+		reviewCount: 4201,
+	},
+	{
+		title: "ROG Strix GT 4X",
+		image: [PicOne, PicTwo, PicThree],
+		desc:
+			"Some Desc about the product and some features that this product has and how much it will be useful",
+		stat: "Best Selling",
+		price: "₹4400",
+		stars: 4,
+		reviewCount: 4201,
+	},
+	{
+		title: "ROG Strix GT 4X",
+		image: [PicTwo, PicFour, PicThree],
+		desc:
+			"Some Desc about the product and some features that this product has and how much it will be useful",
+		stat: "Best Selling",
+		price: "₹4400",
+		stars: 4,
+		reviewCount: 4201,
+	},
+	{
+		title: "ROG Strix GT 4X",
+		image: [PicThree, PicTwo, PicFour],
+		desc:
+			"Some Desc about the product and some features that this product has and how much it will be useful",
+		stat: "Best Selling",
+		price: "₹4400",
+		stars: 4,
+		reviewCount: 4201,
+	},
+	{
+		title: "ROG Strix GT 4X",
+		image: [PicFour, PicTwo, PicThree],
+		desc:
+			"Some Desc about the product and some features that this product has and how much it will be useful",
+		stat: "Best Selling",
+		price: "₹4400",
+		stars: 4,
+		reviewCount: 4201,
 	},
 ];
 
@@ -73,11 +161,13 @@ const RecentlyViewed = () => {
 					{data.map((item, index) => (
 						<CardContainer key={index}>
 							<Card
-								image={item.image}
+								image={item.image[0]}
 								title={item.title}
 								desc={item.desc}
 								stat={item.stat}
 								price={item.price}
+								stars={item.stars}
+								reviewCount={item.reviewCount}
 							/>
 						</CardContainer>
 					))}

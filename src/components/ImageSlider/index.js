@@ -33,35 +33,43 @@ import { ActiveStarIcon, InActiveStarIcon } from "../../assets/icons";
 const data = [
 	{
 		title: "ROG Strix GT 4X",
-		image: PicOne,
+		image: [PicOne, PicTwo, PicThree],
 		desc:
 			"Some Desc about the product and some features that this product has and how much it will be useful",
 		stat: "Best Selling",
 		price: "₹4400",
+		stars: 4,
+		reviewCount: 4021,
 	},
 	{
 		title: "ROG Strix GT 4X",
-		image: PicTwo,
+		image: [PicTwo, PicThree],
 		desc:
 			"Some Desc about the product and some features that this product has and how much it will be useful",
 		stat: "Best Selling",
 		price: "₹4400",
+		stars: 4,
+		reviewCount: 4021,
 	},
 	{
 		title: "ROG Strix GT 4X",
-		image: PicThree,
+		image: [PicThree, PicTwo, PicFour],
 		desc:
 			"Some Desc about the product and some features that this product has and how much it will be useful",
 		stat: "Best Selling",
 		price: "₹4400",
+		stars: 4,
+		reviewCount: 4021,
 	},
 	{
 		title: "ROG Strix GT 4X",
-		image: PicFour,
+		image: [PicFour, PicTwo, PicThree],
 		desc:
 			"Some Desc about the product and some features that this product has and how much it will be useful",
 		stat: "Best Selling",
 		price: "₹4400",
+		stars: 4,
+		reviewCount: 4021,
 	},
 ];
 
@@ -82,11 +90,11 @@ const ImageSlider = () => {
 	return (
 		<Slider {...settings}>
 			{data.map((item, index) => (
-				<Wrapper bgImage={item.image} key={index}>
+				<Wrapper bgImage={item.image[0]} key={index}>
 					<div>
 						<ContentContainer>
 							<Image>
-								<img src={item.image} alt={item.title} />
+								<img src={item.image[0]} alt={item.title} />
 							</Image>
 							<Content>
 								<PTitle>{item.title}</PTitle>
@@ -100,6 +108,7 @@ const ImageSlider = () => {
 										<ActiveStarIcon />
 										<InActiveStarIcon />
 									</div>
+									<span>{`(${item.reviewCount})`}</span>
 								</PStat>
 								<PPrice>{item.price}</PPrice>
 								<PButtonContainer>
