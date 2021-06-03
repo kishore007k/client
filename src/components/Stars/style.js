@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { COLORS } from "../../assets/styles";
 
 export const Rating = styled.div`
 	float: left;
@@ -16,9 +17,9 @@ export const Rating = styled.div`
 		overflow: hidden;
 		white-space: nowrap;
 		cursor: default;
-		font-size: 200%;
+		font-size: 150%;
 		line-height: 1.2;
-		color: #ddd;
+		color: ${COLORS.darkGrey};
 	}
 
 	:not(:checked) > label:before {

@@ -59,4 +59,10 @@ export const BottomDiv = styled.div`
 export const SocialLinks = styled.a`
 	margin: 0px 10px;
 	cursor: pointer;
+	filter: grayscale(1);
+	transition: 0.5s ease-in-out all;
+
+	:hover {
+		filter: none;
+	}
 `;

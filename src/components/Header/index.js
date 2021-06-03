@@ -27,8 +27,6 @@ const Header = () => {
 	const user = useSelector((state) => state.userData?.userData?.user);
 	const dispatch = useDispatch();
 
-	console.log(user);
-
 	return (
 		<HeaderWrapper>
 			<Container>
