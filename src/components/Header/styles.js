@@ -35,10 +35,7 @@ export const Container = styled.div`
 
 export const LogoContainer = styled.div`
 	max-width: 150px;
-
-	img {
-		height: 20px;
-	}
+	width: 100%;
 `;
 
 export const Nav = styled.nav`
@@ -54,14 +51,14 @@ export const Nav = styled.nav`
 
 	button:hover > a {
 		border-radius: 50px;
-		background-color: ${COLORS.primary};
+		background-color: ${(props) => (props.color ? props.color : COLORS.primary)};
 		color: ${COLORS.white};
 	}
 
 	button > a {
 		text-decoration: none;
 		padding: 5px 10px;
-		color: ${COLORS.primary};
+		color: ${(props) => (props.color ? props.color : COLORS.primary)};
 		font-size: ${FONTS.fontSize.title};
 		font-weight: ${FONTS.fontWeight.semiBold};
 		transition: 0.5s ease-in-out all;
@@ -72,7 +69,7 @@ export const Actions = styled.div`
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
-	width: 25%;
+	width: 15%;
 
 	button {
 		margin: 0 10px;
@@ -122,7 +119,7 @@ export const ProfileContainer = styled.div`
 `;
 
 export const LogoutBtn = styled.button`
-	border: 1px solid ${COLORS.primary};
+	border: 1px solid ${(props) => (props.color ? props.color : COLORS.primary)};
 	border-radius: 50px;
 	background: none;
 	padding: 5px 25px;
@@ -131,11 +128,11 @@ export const LogoutBtn = styled.button`
 	font-size: ${FONTS.fontSize.title};
 	font-weight: ${FONTS.fontWeight.semiBold};
 	text-decoration: none;
-	color: ${COLORS.primary};
+	color: ${(props) => (props.color ? props.color : COLORS.primary)};
 	transition: 0.5s ease-in-out all;
 
 	:hover {
 		color: ${COLORS.white};
-		background: ${COLORS.primary};
+		background: ${(props) => (props.color ? props.color : COLORS.primary)};
 	}
 `;

@@ -18,10 +18,12 @@ const Dashboard = () => {
 	return (
 		<div>
 			<Header />
-			Dashboard
-			<form>
-				<button onClick={LogOut}>Log Out</button>
-			</form>
+			<div style={{ marginTop: "80px" }}>
+				Dashboard
+				<form>
+					<button onClick={LogOut}>Log Out</button>
+				</form>
+			</div>
 			<Footer />
 		</div>
 	);

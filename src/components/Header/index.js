@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { LogOut } from "../../api/Auth";
+import { useHistory } from "react-router-dom";
 
 // Styles
 import {
@@ -17,13 +18,17 @@ import {
 } from "./styles";
 
 // Images
-import logo from "../../assets/images/logoPrimary.png";
-import search from "../../assets/images/search.png";
-import cart from "../../assets/images/Cart.png";
 import { AdminPanelIcon } from "../../assets/icons";
 import { COLORS } from "../../assets/styles";
+import {
+	CartIcon,
+	LogoIcon,
+	SearchIcon,
+} from "../../assets/icons/Header Icons/index";
 
-const Header = () => {
+const Header = ({ color }) => {
+	const history = useHistory();
+
 	const user = useSelector((state) => state.userData?.userData?.user);
 	const dispatch = useDispatch();
 
@@ -32,15 +37,15 @@ const Header = () => {
 			<Container>
 				<LogoContainer>
 					<Link to="/">
-						<img src={logo} alt="logo" />
+						<LogoIcon color={color} />
 					</Link>
 				</LogoContainer>
-				<Nav>
+				<Nav color={color}>
 					<button>
 						<Link to="/">Home</Link>
 					</button>
 					<button>
-						<Link to="/products">Products</Link>
+						<Link to="/product">Products</Link>
 					</button>
 					<button>
 						<Link to="/">About</Link>
@@ -50,14 +55,14 @@ const Header = () => {
 					</button>
 				</Nav>
 				<Actions>
-					<Btn>
+					<Btn color={color}>
 						<Link to="/">
-							<img src={search} alt="search" />
+							<SearchIcon color={color} />
 						</Link>
 					</Btn>
-					<Btn>
+					<Btn color={color}>
 						<Link to="/cart">
-							<img src={cart} alt="cart" />
+							<CartIcon color={color} />
 						</Link>
 					</Btn>
 					{!user ? (
@@ -65,7 +70,7 @@ const Header = () => {
 							<Link to="/login">Login</Link>
 						</LoginBtn>
 					) : (
-						<ProfileContainer>
+						<ProfileContainer color={color}>
 							{user.userRole === 1 && (
 								<Link to="/dashboard">
 									<AdminPanelIcon color={COLORS.primary} />
@@ -78,7 +83,9 @@ const Header = () => {
 									style={{ width: "100%", borderRadius: "50%" }}
 								/>
 							</Link>
-							<LogoutBtn onClick={() => LogOut({ dispatch })}>Logout</LogoutBtn>
+							<LogoutBtn color={color} onClick={() => LogOut({ dispatch, history })}>
+								Logout
+							</LogoutBtn>
 						</ProfileContainer>
 					)}
 				</Actions>

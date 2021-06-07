@@ -14,10 +14,13 @@ import { Provider } from "react-redux";
 import store from "./redux/index";
 import ResetPassword from "./components/ResetPassword";
 import ForgotPass from "./components/ForgotPass";
-import ProductScreen from "./pages/ProductScreen";
+import ProductDetailScreen from "./pages/ProductDetailScreen";
 import AboutScreen from "./pages/AboutScreen";
 import ContactScreen from "./pages/ContactScreen";
 import Page404 from "./pages/404Page";
+import ProtectedRoute from "./screens/ProtectedRoute";
+import ProductScreen from "./pages/ProductScreen";
+import EditUserProfile from "./components/EditProfile/Users";
 
 const App = () => {
 	return (
@@ -29,13 +32,15 @@ const App = () => {
 						<Route path="/signUp" exact component={SignUpScreen} />
 						<Route path="/login" exact component={LoginScreen} />
 						<Route path="/profile" exact component={UserProfile} />
-						<Route path="/admin/profile" exact component={AdminProfile} />
-						<Route path="/dashboard" exact component={Dashboard} />
+						<Route path="/editProfile" exact component={EditUserProfile} />
 						<Route path="/forgotPassword" exact component={ForgotPass} />
 						<Route path="/resetPassword" exact component={ResetPassword} />
 						<Route path="/about" exact component={AboutScreen} />
 						<Route path="/contact" exact component={ContactScreen} />
-						<Route path="/products/:productName" component={ProductScreen} />
+						<Route path="/product" exact component={ProductScreen} />
+						<Route path="/products/:productName" component={ProductDetailScreen} />
+						<ProtectedRoute path="/dashboard" exact component={Dashboard} />
+						<ProtectedRoute path="/admin/profile" exact component={AdminProfile} />
 						<Route component={Page404} />
 					</Switch>
 				</Router>

@@ -46,8 +46,9 @@ export const Login = ({ email, password, history, dispatch }) => {
 		.catch((e) => console.log(e));
 };
 
-export const LogOut = ({ dispatch }) => {
+export const LogOut = ({ dispatch, history }) => {
 	dispatch(logoutUser());
+	history.push("/");
 	localStorage.clear();
 };
 

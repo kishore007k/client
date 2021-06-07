@@ -3,6 +3,7 @@ import React from "react";
 import Stars from "../Stars";
 import {
 	CustomerReviewWrapper,
+	Review,
 	ReviewerNameAndImage,
 	ReviewerNameAndStars,
 	ReviewerProImage,
@@ -27,13 +28,13 @@ const CustomerReviewCard = ({ reviewData }) => {
 					<Stars stars={stars} />
 				</ReviewerNameAndStars>
 			</ReviewerNameAndImage>
-			<div>
+			<Review>
 				<p>{review}</p>
-			</div>
+			</Review>
 			<div>
-				<ReviewImages src={reviewImages[0]} alt={reviewerName} />
-				<ReviewImages src={reviewImages[1]} alt={reviewerName} />
-				<ReviewImages src={reviewImages[2]} alt={reviewerName} />
+				{reviewImages.map((img, index) => (
+					<ReviewImages src={img} alt={reviewerName} key={index} />
+				))}
 			</div>
 		</CustomerReviewWrapper>
 	);

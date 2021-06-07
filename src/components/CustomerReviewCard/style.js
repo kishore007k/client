@@ -35,6 +35,7 @@ export const ReviewerProImage = styled.div`
 
 export const ReviewImages = styled.img`
 	width: 120px;
+	margin-right: 10px;
 `;
 
 export const ReviewerNameAndImage = styled.div`
@@ -57,7 +58,10 @@ export const ReviewerNameAndStars = styled.div`
 `;
 
 export const Review = styled.div`
-  p{
-    
-  }
+	p {
+		color: ${COLORS.darkBlack};
+		font-size: ${FONTS.fontSize.mediumText};
+		font-weight: ${FONTS.fontWeight.medium};
+		margin-bottom: 10px;
+	}
 `;

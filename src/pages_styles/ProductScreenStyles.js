@@ -126,8 +126,8 @@ export const StockAndInput = styled.div`
 	align-items: center;
 	width: 30%;
 	height: 150px;
-	background-color: ${COLORS.BgShade};
-	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+	/* background-color: ${COLORS.BgShade};
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); */
 
 	span {
 		color: ${COLORS.status};
@@ -162,7 +162,7 @@ export const StockInput = styled.div`
 		height: 40px;
 		text-align: center;
 		font-size: ${FONTS.fontSize.title};
-		background-color: ${COLORS.BgShade};
+		/* background-color: ${COLORS.BgShade}; */
 		border: none;
 	}
 
@@ -204,5 +204,26 @@ export const PDesc = styled.div`
 		font-weight: ${FONTS.fontWeight.semiBold};
 		color: ${COLORS.lightBlack};
 		margin-bottom: 10px;
+	}
+`;
+
+export const ReadMoreBtn = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	max-width: 1300px;
+	margin: 40px auto;
+
+	a {
+		color: ${COLORS.primary};
+		font-size: ${FONTS.fontSize.subTitle};
+		font-weight: ${FONTS.fontWeight.medium};
+		text-decoration: none;
+		transition: 0.5s ease-in-out all;
+
+		:hover {
+			font-weight: ${FONTS.fontWeight.semiBold};
+		}
 	}
 `;
