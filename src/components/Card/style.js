@@ -37,7 +37,7 @@ export const CardTitle = styled.h2`
 `;
 
 export const CardStars = styled.div`
-	width: 50%;
+	width: 60%;
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;

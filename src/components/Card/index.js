@@ -12,7 +12,7 @@ import {
 	Stat,
 } from "./style";
 
-import { ActiveStarIcon, InActiveStarIcon } from "../../assets/icons";
+import Stars from "../Stars";
 
 const Card = ({ image, title, desc, stat, price, stars, reviewCount }) => {
 	return (
@@ -24,11 +24,7 @@ const Card = ({ image, title, desc, stat, price, stars, reviewCount }) => {
 				<CardDetails>
 					<CardTitle>{title}</CardTitle>
 					<CardStars>
-						<ActiveStarIcon />
-						<ActiveStarIcon />
-						<ActiveStarIcon />
-						<ActiveStarIcon />
-						<InActiveStarIcon />
+						<Stars stars={stars} />
 					</CardStars>
 					<CardReviewCount>{`(${reviewCount})`}</CardReviewCount>
 				</CardDetails>

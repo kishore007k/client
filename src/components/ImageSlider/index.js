@@ -26,9 +26,7 @@ import {
 } from "./style";
 import BuyNowBtn from "../../utils/BuyNowBtn";
 import AddToCartBtn from "../../utils/AddToCartBtn";
-
-// Icons
-import { ActiveStarIcon, InActiveStarIcon } from "../../assets/icons";
+import Stars from "../Stars";
 
 const data = [
 	{
@@ -102,11 +100,7 @@ const ImageSlider = () => {
 								<PStat>
 									<span>{item.stat}</span>
 									<div>
-										<ActiveStarIcon />
-										<ActiveStarIcon />
-										<ActiveStarIcon />
-										<ActiveStarIcon />
-										<InActiveStarIcon />
+										<Stars stars={item.stars} />
 									</div>
 									<span>{`(${item.reviewCount})`}</span>
 								</PStat>

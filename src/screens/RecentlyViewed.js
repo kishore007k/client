@@ -13,6 +13,7 @@ import PicFour from "../assets/images/slide/pic4.jpg";
 
 import styled from "styled-components";
 import { COLORS, FONTS } from "../assets/styles";
+import { Link } from "react-router-dom";
 
 const data = [
 	{
@@ -172,15 +173,19 @@ const RecentlyViewed = () => {
 				<Slider {...settings}>
 					{data.map((item, index) => (
 						<CardContainer key={index}>
-							<Card
-								image={item.image[0]}
-								title={item.title}
-								desc={item.desc}
-								stat={item.stat}
-								price={item.price}
-								stars={item.stars}
-								reviewCount={item.reviewCount}
-							/>
+							<Link
+								to={{ pathname: `/products/${item.title}`, state: { product: item } }}
+							>
+								<Card
+									image={item.image[0]}
+									title={item.title}
+									desc={item.desc}
+									stat={item.stat}
+									price={item.price}
+									stars={item.stars}
+									reviewCount={item.reviewCount}
+								/>
+							</Link>
 						</CardContainer>
 					))}
 				</Slider>
@@ -206,4 +211,8 @@ const SliderContainer = styled.div`
 
 const CardContainer = styled.div`
 	margin: 20px 0px;
+
+	a {
+		text-decoration: none;
+	}
 `;

@@ -187,3 +187,59 @@ export const Address = styled.p`
 	background-color: ${COLORS.lightGreyText};
 	padding: 10px;
 `;
+
+export const OrdersTitle = styled.h1`
+	font-size: ${FONTS.fontSize.H1};
+	color: ${COLORS.mediumBlack};
+	font-weight: ${FONTS.fontWeight.semiBold};
+	font-family: ${FONTS.fontFamily.secondary};
+`;
+
+export const OrdersContainer = styled.div`
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	margin: 50px auto;
+`;
+
+export const OrdersImage = styled.div`
+	display: block;
+	width: 40%;
+
+	img {
+		max-width: 500px;
+		width: 100%;
+	}
+`;
+
+export const OrdersMain = styled.div`
+	display: block;
+	width: 60%;
+
+	h2 {
+		color: ${COLORS.mediumBlack};
+		font-size: ${FONTS.fontSize.title};
+		font-weight: ${FONTS.fontWeight.bold};
+		font-family: ${FONTS.fontFamily.secondary};
+		margin-bottom: 20px;
+	}
+
+	p {
+		width: 70%;
+		color: ${COLORS.mediumBlack};
+		font-size: ${FONTS.fontSize.para};
+		font-weight: ${FONTS.fontWeight.medium};
+		font-family: ${FONTS.fontFamily.secondary};
+		margin-bottom: 20px;
+	}
+`;
+
+export const OrdersSpan = styled.span`
+	color: ${(props) => (props ? props.color : COLORS.mediumBlack)};
+	font-size: ${FONTS.fontSize.para};
+	font-weight: ${FONTS.fontWeight.medium};
+	font-family: ${FONTS.fontFamily.secondary};
+	letter-spacing: 0.05em;
+	line-height: 20px;
+`;

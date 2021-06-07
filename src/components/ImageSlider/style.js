@@ -81,7 +81,7 @@ export const PStat = styled.div`
 
 	div {
 		display: flex;
-		width: 70%;
+		width: 90%;
 		justify-content: space-evenly;
 		align-items: center;
 	}

@@ -24,8 +24,10 @@ export const TableHeading = styled.thead`
 		grid-template-columns: 3fr 1fr 1fr;
 		width: 100%;
 		border-bottom: 1px solid ${COLORS.darkGrey};
-		padding-bottom: 10px;
+		padding-top: 15px;
+		padding-bottom: 15px;
 		text-align: center;
+		background-color: ${COLORS.lightGreyText};
 	}
 `;
 
@@ -42,6 +44,11 @@ export const TableBody = styled.tbody`
 		padding-top: 10px;
 		padding-bottom: 10px;
 		text-align: center;
+		transition: 0.5s ease-in-out all;
+
+		:hover {
+			background-color: ${COLORS.BgShade};
+		}
 	}
 `;
 

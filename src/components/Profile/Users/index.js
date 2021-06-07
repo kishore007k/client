@@ -22,6 +22,11 @@ import {
 	UserAddressTitle,
 	UserAddressDiv,
 	Address,
+	OrdersTitle,
+	OrdersContainer,
+	OrdersImage,
+	OrdersMain,
+	OrdersSpan,
 } from "./style";
 import { Link } from "react-router-dom";
 import { fetchUserDetail } from "../../../api/Auth";
@@ -78,6 +83,8 @@ const UserProfile = () => {
 		},
 	];
 
+	const CurrentState = "onProgress";
+
 	return (
 		<div>
 			<Header color={COLORS.profileNav} />
@@ -129,21 +136,14 @@ const UserProfile = () => {
 								</UserAddressDiv>
 							</UserAddress>
 						</ProfileSub>
-						<h1>Orders</h1>
+						<OrdersTitle>Orders</OrdersTitle>
 						<div>
-							<div
-								style={{
-									display: "flex",
-									width: "100%",
-									maxWidth: "1300px",
-									margin: "30px auto",
-								}}
-							>
-								<div style={{ width: "40%", backgroundColor: "aliceblue" }}>
-									<img src={OrderImage} alt="OrderImage" style={{ width: "500px" }} />
-								</div>
-								<div style={{ width: "50%", backgroundColor: "aqua" }}>
-									<h2>title of the product</h2>
+							<OrdersContainer>
+								<OrdersImage>
+									<img src={OrderImage} alt="OrderImage" />
+								</OrdersImage>
+								<OrdersMain>
+									<h2>SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s</h2>
 									<p>
 										Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis
 										tenetur quidem commodi. Minus, a nobis sapiente natus eveniet
@@ -151,22 +151,32 @@ const UserProfile = () => {
 										Ratione, voluptatum in?
 									</p>
 									<div>
-										<span>
+										<OrdersSpan
+											color={CurrentState === "orderPlaced" ? COLORS.orangeBtn : ""}
+										>
 											Order Placed
 											<OrderCurve />
-										</span>
-										<span>
+										</OrdersSpan>
+										<OrdersSpan
+											color={CurrentState === "onProgress" ? COLORS.orangeBtn : ""}
+										>
 											On Progress
 											<OrderCurve />
-										</span>
-										<span>
+										</OrdersSpan>
+										<OrdersSpan
+											color={CurrentState === "outForDelivery" ? COLORS.orangeBtn : ""}
+										>
 											Out For Delivery
 											<OrderCurve />
-										</span>
-										<span>Delivered</span>
+										</OrdersSpan>
+										<OrdersSpan
+											color={CurrentState === "delivered" ? COLORS.orangeBtn : ""}
+										>
+											Delivered
+										</OrdersSpan>
 									</div>
-								</div>
-							</div>
+								</OrdersMain>
+							</OrdersContainer>
 							<div>
 								<CustomTable data={tableData} headings={tableHeadings} />
 							</div>
