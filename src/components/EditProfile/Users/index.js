@@ -3,6 +3,22 @@ import FileBase64 from "react-file-base64";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchUserDetail } from "../../../api/Auth";
 import { UpdateUserProfile } from "../../../api/Upload";
+import Header from "../../Header";
+import Footer from "../../Footer";
+import {
+	BackCurveContainer,
+	EditProfileContainer,
+	EditProfileImage,
+	EditProfileTitle,
+	EPImageUpload,
+	EPImageUploader,
+	EPInputs,
+	EPInnerInputs,
+	EPInnerInputPN,
+	EPUpdateBtn,
+} from "./style";
+import { BackCurve } from "../../../assets/icons";
+import { useHistory } from "react-router";
 
 const EditUserProfile = () => {
 	const localUserDataJson = JSON.parse(localStorage.getItem("user"));
@@ -21,14 +37,28 @@ const EditUserProfile = () => {
 			? UserDataReducer?.userName
 			: userData?.user?.userName
 	);
+	const [firstName, setFirstName] = useState(
+		UserDataReducer?.firstName
+			? UserDataReducer?.firstName
+			: userData?.user?.firstName
+	);
+	const [lastName, setLastName] = useState(
+		UserDataReducer?.lastName
+			? UserDataReducer?.lastName
+			: userData?.user?.lastName
+	);
+	const [email, setEmail] = useState(
+		UserDataReducer?.email ? UserDataReducer?.email : userData?.user?.email
+	);
 	const [phNumber, setPhNumber] = useState(
-		UserDataReducer?.phoneNumber
-			? UserDataReducer?.phoneNumber
-			: userData?.user?.phoneNumber
+		UserDataReducer?.userAddress?.phoneNumber
+			? UserDataReducer?.userAddress?.phoneNumber
+			: userData?.user?.userAddress?.phoneNumber
 	);
 
 	const id = localUserDataJson?.data?._id;
 	const localToken = localUserDataJson?.token;
+	const history = useHistory();
 
 	const UpdateUser = (e) => {
 		e.preventDefault();
@@ -37,8 +67,12 @@ const EditUserProfile = () => {
 			id,
 			userName: userName,
 			phoneNumber: phNumber,
+			firstName,
+			lastName,
+			email,
 			dispatch,
 			localToken,
+			history,
 		});
 	};
 
@@ -48,53 +82,101 @@ const EditUserProfile = () => {
 
 	return (
 		<div>
-			<p>Upload your Profile Pic Here</p>
-			<FileBase64 onDone={(files) => setImage(files.base64)} />
-			{UserDataReducer || image ? (
-				<img
-					src={
-						image === UserDataReducer?.userImage ? UserDataReducer?.userImage : image
-					}
-					alt={
-						userName === UserDataReducer?.userName
-							? UserDataReducer?.userName
-							: image?.name
-					}
-					style={{ width: "30%", margin: "50 auto", borderRadius: "50%" }}
-				/>
-			) : (
-				<></>
-			)}
-			<br />
-			<hr />
-			<label>User Name:</label>
-			<input
-				type="text"
-				placeholder="UserName"
-				value={
-					userName === UserDataReducer?.userName
-						? UserDataReducer?.userName
-						: userName
-				}
-				onChange={(e) => setUserName(e.target.value)}
-			/>
-			<hr />
-			<label>Phone Number:</label>
-			<input
-				type="number"
-				placeholder="phone number"
-				value={
-					phNumber === UserDataReducer?.phoneNumber
-						? UserDataReducer?.phoneNumber
-						: phNumber
-				}
-				onChange={(e) => setPhNumber(e.target.value)}
-			/>
-			<br />
-			<hr />
-			<br />
-			<button onClick={UpdateUser}>Update</button>
-			<hr />
+			<Header />
+			<BackCurveContainer>
+				<BackCurve />
+			</BackCurveContainer>
+			<EditProfileContainer>
+				<EditProfileTitle>Edit Profile</EditProfileTitle>
+				<EPImageUpload>
+					{UserDataReducer || image ? (
+						<EditProfileImage
+							image={
+								image === UserDataReducer?.userImage
+									? UserDataReducer?.userImage
+									: image
+							}
+						/>
+					) : (
+						<></>
+					)}
+					<EPImageUploader>
+						<span>Select and upload a Picture to update Profile Picture</span>
+						<FileBase64 onDone={(files) => setImage(files.base64)} />
+					</EPImageUploader>
+				</EPImageUpload>
+				<EPInputs>
+					<EPInnerInputs>
+						<div>
+							<label>User Name:</label>
+							<input
+								type="text"
+								placeholder="UserName"
+								value={
+									userName === UserDataReducer?.userName
+										? UserDataReducer?.userName
+										: userName
+								}
+								onChange={(e) => setUserName(e.target.value)}
+							/>
+						</div>
+						<div>
+							<label>First Name:</label>
+							<input
+								type="text"
+								placeholder="UserName"
+								value={
+									firstName === UserDataReducer?.firstName
+										? UserDataReducer?.firstName
+										: firstName
+								}
+								onChange={(e) => setFirstName(e.target.value)}
+							/>
+						</div>
+					</EPInnerInputs>
+					<EPInnerInputs>
+						<div>
+							<label>Last Name:</label>
+							<input
+								type="text"
+								placeholder="LastName"
+								value={
+									lastName === UserDataReducer?.lastName
+										? UserDataReducer?.lastName
+										: lastName
+								}
+								onChange={(e) => setLastName(e.target.value)}
+							/>
+						</div>
+						<div>
+							<label>Email:</label>
+							<input
+								type="email"
+								placeholder="Email"
+								value={
+									email === UserDataReducer?.email ? UserDataReducer?.email : email
+								}
+								onChange={(e) => setEmail(e.target.value)}
+							/>
+						</div>
+					</EPInnerInputs>
+					<EPInnerInputPN>
+						<label>Phone Number:</label>
+						<input
+							type="number"
+							placeholder="phone number"
+							value={
+								phNumber === UserDataReducer?.phoneNumber
+									? UserDataReducer?.phoneNumber
+									: phNumber
+							}
+							onChange={(e) => setPhNumber(e.target.value)}
+						/>
+					</EPInnerInputPN>
+				</EPInputs>
+				<EPUpdateBtn onClick={UpdateUser}>Update</EPUpdateBtn>
+			</EditProfileContainer>
+			<Footer />
 		</div>
 	);
 };

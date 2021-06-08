@@ -5,7 +5,7 @@ import Stars from "../Stars";
 import { CardWrapper, ProStat } from "./style";
 
 const SimilarProCard = ({ product }) => {
-	const { title, image, price, category, stars, id } = product;
+	const { title, image, price, category, stars } = product;
 
 	return (
 		<CardWrapper>

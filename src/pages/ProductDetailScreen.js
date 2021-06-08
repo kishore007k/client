@@ -31,7 +31,7 @@ import {
 	Title,
 	ReadMoreBtn,
 } from "../pages_styles/ProductScreenStyles";
-import SimilarProducts from "../components/SimilarProducts";
+import SimilarProducts from "../components/SimilarProCard";
 import CustomerReviews from "../components/CustomersReview";
 import { Link } from "react-router-dom";
 

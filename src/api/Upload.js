@@ -8,8 +8,12 @@ export const UpdateUserProfile = ({
 	id,
 	userName,
 	phoneNumber,
+	firstName,
+	lastName,
+	email,
 	dispatch,
 	localToken,
+	history,
 }) => {
 	if (localToken) {
 		const config = {
@@ -21,10 +25,11 @@ export const UpdateUserProfile = ({
 		axios
 			.post(
 				`${URL}/api/users/edit`,
-				{ userImage, uId: id, userName, phoneNumber },
+				{ userImage, uId: id, userName, phoneNumber, firstName, lastName, email },
 				config
 			)
 			.then((res) => {
+				history.push("/profile");
 				dispatch(updateUser(res.data));
 			})
 			.catch((e) => console.log(e));

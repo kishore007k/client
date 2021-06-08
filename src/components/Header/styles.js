@@ -119,20 +119,18 @@ export const ProfileContainer = styled.div`
 `;
 
 export const LogoutBtn = styled.button`
-	border: 1px solid ${(props) => (props.color ? props.color : COLORS.primary)};
-	border-radius: 50px;
+	border: none;
 	background: none;
-	padding: 5px 25px;
 	cursor: pointer;
-	transition: 0.5s ease-in-out all;
-	font-size: ${FONTS.fontSize.title};
-	font-weight: ${FONTS.fontWeight.semiBold};
-	text-decoration: none;
-	color: ${(props) => (props.color ? props.color : COLORS.primary)};
-	transition: 0.5s ease-in-out all;
+`;
 
-	:hover {
-		color: ${COLORS.white};
-		background: ${(props) => (props.color ? props.color : COLORS.primary)};
-	}
+export const NavProfile = styled.div`
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: url(${(props) => (props.image ? props.image : "")});
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 50%;
 `;

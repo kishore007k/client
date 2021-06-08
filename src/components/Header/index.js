@@ -15,6 +15,7 @@ import {
 	Btn,
 	ProfileContainer,
 	LogoutBtn,
+	NavProfile,
 } from "./styles";
 
 // Images
@@ -23,6 +24,7 @@ import { COLORS } from "../../assets/styles";
 import {
 	CartIcon,
 	LogoIcon,
+	LogOutIcon,
 	SearchIcon,
 } from "../../assets/icons/Header Icons/index";
 
@@ -77,14 +79,10 @@ const Header = ({ color }) => {
 								</Link>
 							)}
 							<Link to="/profile">
-								<img
-									src={user?.userImage}
-									alt={user?.userName}
-									style={{ width: "100%", borderRadius: "50%" }}
-								/>
+								<NavProfile image={user?.userImage} />
 							</Link>
 							<LogoutBtn color={color} onClick={() => LogOut({ dispatch, history })}>
-								Logout
+								<LogOutIcon color={color} />
 							</LogoutBtn>
 						</ProfileContainer>
 					)}
