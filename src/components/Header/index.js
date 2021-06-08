@@ -50,10 +50,10 @@ const Header = ({ color }) => {
 						<Link to="/product">Products</Link>
 					</button>
 					<button>
-						<Link to="/">About</Link>
+						<Link to="/about">About</Link>
 					</button>
 					<button>
-						<Link to="/">Contact</Link>
+						<Link to="/contact">Contact</Link>
 					</button>
 				</Nav>
 				<Actions>
@@ -75,7 +75,7 @@ const Header = ({ color }) => {
 						<ProfileContainer color={color}>
 							{user.userRole === 1 && (
 								<Link to="/dashboard">
-									<AdminPanelIcon color={COLORS.primary} />
+									<AdminPanelIcon color={color} />
 								</Link>
 							)}
 							<Link to="/profile">
