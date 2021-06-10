@@ -16,6 +16,7 @@ export const CardWrapper = styled.div`
 
 	a {
 		text-decoration: none;
+		color: ${COLORS.mediumBlack};
 	}
 
 	img {
@@ -31,6 +32,12 @@ export const CardWrapper = styled.div`
 		margin: 10px 0px;
 		text-align: start;
 	}
+
+	p {
+		font-size: ${FONTS.fontSize.para};
+		font-weight: ${FONTS.fontWeight.medium};
+		margin-bottom: 10px;
+	}
 `;
 
 export const ProStat = styled.div`
@@ -43,4 +50,13 @@ export const ProStat = styled.div`
 		font-size: ${FONTS.fontSize.mediumText};
 		font-weight: ${FONTS.fontWeight.semiBold};
 	}
+`;
+
+export const SPWrapper = styled.div`
+	display: flex;
+	max-width: 1300px;
+	width: 100%;
+	margin: 20px auto;
+	justify-content: space-evenly;
+	align-items: center;
 `;

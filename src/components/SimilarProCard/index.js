@@ -2,22 +2,25 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Stars from "../Stars";
 
-import { CardWrapper, ProStat } from "./style";
+import { CardWrapper, ProStat, SPWrapper } from "./style";
 
 const SimilarProCard = ({ product }) => {
-	const { title, image, price, category, stars } = product;
-
 	return (
-		<CardWrapper>
-			<Link to="/">
-				<img src={image[1]} alt={category} />
-				<h4>{title}</h4>
-				<ProStat>
-					<h5>{price}/-</h5>
-					<Stars stars={stars} />
-				</ProStat>
-			</Link>
-		</CardWrapper>
+		<SPWrapper>
+			{product.map((item, index) => (
+				<CardWrapper>
+					<Link to="/" key={index}>
+						<img src={item.image[1]} alt={item.category} />
+						<h4>{item.title}</h4>
+						<p>{item.desc}</p>
+						<ProStat>
+							<h5>{item.price}/-</h5>
+							<Stars stars={item.stars} />
+						</ProStat>
+					</Link>
+				</CardWrapper>
+			))}
+		</SPWrapper>
 	);
 };
 

@@ -35,6 +35,11 @@ import SimilarProducts from "../components/SimilarProCard";
 import CustomerReviews from "../components/CustomersReview";
 import { Link } from "react-router-dom";
 
+import PicOne from "../assets/images/slide/pic1.jpg";
+import PicTwo from "../assets/images/slide/pic2.jpg";
+import PicThree from "../assets/images/slide/pic3.jpg";
+import PicFour from "../assets/images/slide/pic4.jpg";
+
 const ProductDetailScreen = (props) => {
 	const {
 		product: { image, desc, stars, title, price, reviewCount, stat },
@@ -50,6 +55,53 @@ const ProductDetailScreen = (props) => {
 	const decreasePCount = () => {
 		setPCount(Number(pCount) - 1);
 	};
+
+	const data = [
+		{
+			title: "ROG Strix GT 4X",
+			image: [PicOne, PicTwo, PicThree],
+			desc:
+				"Some Desc about the product and some features that this product has and how much it will be useful",
+			stat: "Best Selling",
+			price: "₹4400",
+			category: "computer",
+			stars: 4,
+			reviewCount: 4201,
+		},
+		{
+			title: "ROG Strix GT 4X",
+			image: [PicTwo, PicFour, PicThree],
+			desc:
+				"Some Desc about the product and some features that this product has and how much it will be useful",
+			stat: "Best Selling",
+			price: "₹4400",
+			category: "computer",
+			stars: 3,
+			reviewCount: 4201,
+		},
+		{
+			title: "ROG Strix GT 4X",
+			image: [PicThree, PicTwo, PicFour],
+			desc:
+				"Some Desc about the product and some features that this product has and how much it will be useful",
+			stat: "Best Selling",
+			price: "₹4400",
+			category: "computer",
+			stars: 4,
+			reviewCount: 4201,
+		},
+		{
+			title: "ROG Strix GT 4X",
+			image: [PicFour, PicTwo, PicThree],
+			desc:
+				"Some Desc about the product and some features that this product has and how much it will be useful",
+			stat: "Best Selling",
+			price: "₹4400",
+			category: "computer",
+			stars: 5,
+			reviewCount: 4201,
+		},
+	];
 
 	return (
 		<>
@@ -118,7 +170,7 @@ const ProductDetailScreen = (props) => {
 				</ProDescContainer>
 			</Wrapper>
 			<Divider />
-			<SimilarProducts />
+			<SimilarProducts product={data} />
 			<Divider />
 			<CustomerReviews stars={stars} reviewCount={reviewCount} />
 			<ReadMoreBtn>

@@ -34,7 +34,8 @@ const CardContainer = styled.div`
 	grid-gap: 20px;
 	grid-area: auto;
 	grid-auto-flow: dense;
-	width: 1300px;
+	max-width: 1300px;
+	width: 100%;
 	margin: 60px auto;
 
 	a {
