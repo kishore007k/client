@@ -20,7 +20,6 @@ import {
 
 // Images
 import { AdminPanelIcon } from "../../assets/icons";
-import { COLORS } from "../../assets/styles";
 import {
 	CartIcon,
 	LogoIcon,

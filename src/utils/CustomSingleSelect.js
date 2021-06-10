@@ -2,11 +2,6 @@ import React, { useState } from "react";
 import Select from "react-select";
 import chroma from "chroma-js";
 
-const options = [
-	{ value: "user", label: "User", color: "#68FFB7" },
-	{ value: "admin", label: "Admin", color: "#FF7878" },
-];
-
 const dot = (color = "#ccc") => ({
 	alignItems: "center",
 	display: "flex",
@@ -56,8 +51,8 @@ const colourStyles = {
 	singleValue: (styles, { data }) => ({ ...styles, ...dot(data.color) }),
 };
 
-const CustomSingleSelect = () => {
-	const [selectedOption, setSelectedOption] = useState(null);
+const CustomSingleSelect = ({ options }) => {
+	const [selectedOption, setSelectedOption] = useState("");
 
 	return (
 		<Select
