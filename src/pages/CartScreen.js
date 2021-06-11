@@ -210,7 +210,9 @@ const CartScreen = () => {
 						</div>
 					</CartRightSideCard>
 					<BuyNowBtnContainer>
-						<button>Buy Now</button>
+						<Link to="/cart/payment">
+							<button>Buy Now</button>
+						</Link>
 					</BuyNowBtnContainer>
 				</CartRightSideCardContainer>
 			</CartMain>

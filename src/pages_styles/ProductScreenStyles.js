@@ -227,3 +227,30 @@ export const ReadMoreBtn = styled.div`
 		}
 	}
 `;
+
+export const SimilarProductsDiv = styled.div`
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1300px;
+	width: 100%;
+	margin: 10px auto;
+
+	h3 {
+		color: ${COLORS.mediumBlack};
+		font-size: ${FONTS.fontSize.title};
+		font-weight: ${FONTS.fontWeight.semiBold};
+	}
+
+	a {
+		text-decoration: none;
+		color: ${COLORS.primary};
+		font-size: ${FONTS.fontSize.para};
+		font-weight: ${FONTS.fontWeight.medium};
+		transition: 0.5s ease-in-out all;
+
+		:hover {
+			font-weight: ${FONTS.fontWeight.semiBold};
+		}
+	}
+`;

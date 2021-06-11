@@ -22,6 +22,7 @@ import ProtectedRoute from "./screens/ProtectedRoute";
 import ProductScreen from "./pages/ProductScreen";
 import EditUserProfile from "./components/EditProfile/Users";
 import CartScreen from "./pages/CartScreen";
+import PaymentScreen from "./screens/PaymentScreen";
 
 const App = () => {
 	return (
@@ -40,6 +41,7 @@ const App = () => {
 						<Route path="/contact" exact component={ContactScreen} />
 						<Route path="/product" exact component={ProductScreen} />
 						<Route path="/cart" exact component={CartScreen} />
+						<Route path="/cart/payment" exact component={PaymentScreen} />
 						<Route path="/products/:productName" component={ProductDetailScreen} />
 						<ProtectedRoute path="/dashboard" exact component={Dashboard} />
 						<ProtectedRoute path="/admin/profile" exact component={AdminProfile} />

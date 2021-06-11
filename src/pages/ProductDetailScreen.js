@@ -30,6 +30,7 @@ import {
 	StockInput,
 	Title,
 	ReadMoreBtn,
+	SimilarProductsDiv,
 } from "../pages_styles/ProductScreenStyles";
 import SimilarProducts from "../components/SimilarProCard";
 import CustomerReviews from "../components/CustomersReview";
@@ -170,6 +171,10 @@ const ProductDetailScreen = (props) => {
 				</ProDescContainer>
 			</Wrapper>
 			<Divider />
+			<SimilarProductsDiv>
+				<h3>Similar Products</h3>
+				<Link to="/product">Show More</Link>
+			</SimilarProductsDiv>
 			<SimilarProducts product={data} />
 			<Divider />
 			<CustomerReviews stars={stars} reviewCount={reviewCount} />
