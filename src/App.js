@@ -5,10 +5,8 @@ import Main from "./main";
 import SignUpScreen from "./pages/SignUpScreen";
 import LoginScreen from "./pages/LoginScreen";
 import UserProfile from "./components/Profile/Users";
-import AdminProfile from "./components/Profile/Admin";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Dashboard from "./components/Dashboard/Dashboard";
 
 import { Provider } from "react-redux";
 import store from "./redux/index";
@@ -23,6 +21,7 @@ import ProductScreen from "./pages/ProductScreen";
 import EditUserProfile from "./components/EditProfile/Users";
 import CartScreen from "./pages/CartScreen";
 import PaymentScreen from "./screens/PaymentScreen";
+import AdminDashboard from "./components/Dashboard/AdminDashboard";
 
 const App = () => {
 	return (
@@ -43,8 +42,7 @@ const App = () => {
 						<Route path="/cart" exact component={CartScreen} />
 						<Route path="/cart/payment" exact component={PaymentScreen} />
 						<Route path="/products/:productName" component={ProductDetailScreen} />
-						<ProtectedRoute path="/dashboard" exact component={Dashboard} />
-						<ProtectedRoute path="/admin/profile" exact component={AdminProfile} />
+						<ProtectedRoute path="/dashboard" exact component={AdminDashboard} />
 						<Route component={Page404} />
 					</Switch>
 				</Router>

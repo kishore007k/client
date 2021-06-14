@@ -27,14 +27,14 @@ import {
 	SearchIcon,
 } from "../../assets/icons/Header Icons/index";
 
-const Header = ({ color }) => {
+const Header = ({ color, image }) => {
 	const history = useHistory();
 
 	const user = useSelector((state) => state.userData?.userData?.user);
 	const dispatch = useDispatch();
 
 	return (
-		<HeaderWrapper>
+		<HeaderWrapper image={image}>
 			<Container>
 				<LogoContainer>
 					<Link to="/">

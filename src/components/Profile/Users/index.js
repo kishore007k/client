@@ -27,6 +27,7 @@ import {
 	OrdersImage,
 	OrdersMain,
 	OrdersSpan,
+	CustomTableWrapper,
 } from "./style";
 import { Link } from "react-router-dom";
 import { fetchUserDetail } from "../../../api/Auth";
@@ -177,9 +178,9 @@ const UserProfile = () => {
 									</div>
 								</OrdersMain>
 							</OrdersContainer>
-							<div>
+							<CustomTableWrapper>
 								<CustomTable data={tableData} headings={tableHeadings} />
-							</div>
+							</CustomTableWrapper>
 						</div>
 					</ProfileMain>
 				</ProfilePageContainer>

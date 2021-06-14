@@ -4,7 +4,6 @@ import { COLORS, FONTS } from "../../assets/styles";
 export const FooterWrapper = styled.div`
 	width: "100%";
 	height: 300px;
-	margin-top: 60px;
 	background: linear-gradient(164.37deg, #333b50 -16.32%, #232837 114.33%);
 	overflow: hidden;
 `;

@@ -1,7 +1,8 @@
 import React from "react";
+import DashboardCover from "./DashboardCover";
 
 const UsersRoleScreen = () => {
-	return <div>UsersRoleScreen</div>;
+	return <DashboardCover>UsersRoleScreen</DashboardCover>;
 };
 
 export default UsersRoleScreen;

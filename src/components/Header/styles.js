@@ -18,7 +18,6 @@ export const HeaderWrapper = styled.div`
 		right: 0;
 		top: 0;
 		height: 80px;
-		background: rgba(255, 255, 255, 0.1);
 		filter: blur(5px);
 		backdrop-filter: blur(20px);
 	}

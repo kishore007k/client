@@ -1,7 +1,8 @@
 import React from "react";
+import DashboardCover from "./DashboardCover";
 
 const ProductsScreen = () => {
-	return <div>ProductsScreen</div>;
+	return <DashboardCover>ProductsScreen</DashboardCover>;
 };
 
 export default ProductsScreen;

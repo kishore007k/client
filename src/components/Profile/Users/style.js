@@ -243,3 +243,7 @@ export const OrdersSpan = styled.span`
 	letter-spacing: 0.05em;
 	line-height: 20px;
 `;
+
+export const CustomTableWrapper = styled.div`
+	margin-bottom: 60px;
+`;
