@@ -21,7 +21,12 @@ import ProductScreen from "./pages/ProductScreen";
 import EditUserProfile from "./components/EditProfile/Users";
 import CartScreen from "./pages/CartScreen";
 import PaymentScreen from "./screens/PaymentScreen";
-import AdminDashboard from "./components/Dashboard/AdminDashboard";
+import AdminProfile from "./components/Profile/Admin";
+import Dashboard from "./pages/Dashboard";
+import CategoriesScreen from "./components/Dashboard/CategoriesScreen";
+import UsersRoleScreen from "./components/Dashboard/UsersRoleScreen";
+import ProductsScreen from "./components/Dashboard/ProductsScreen";
+import OrderScreen from "./components/Dashboard/OrderScreen";
 
 const App = () => {
 	return (
@@ -42,7 +47,12 @@ const App = () => {
 						<Route path="/cart" exact component={CartScreen} />
 						<Route path="/cart/payment" exact component={PaymentScreen} />
 						<Route path="/products/:productName" component={ProductDetailScreen} />
-						<ProtectedRoute path="/dashboard" exact component={AdminDashboard} />
+						<ProtectedRoute exact path="/admin/profile" component={AdminProfile} />
+						<ProtectedRoute exact path="/dashboard" component={Dashboard} />
+						<ProtectedRoute exact path="/categories" component={CategoriesScreen} />
+						<ProtectedRoute exact path="/users" component={UsersRoleScreen} />
+						<ProtectedRoute exact path="/shop" component={ProductsScreen} />
+						<ProtectedRoute exact path="/orders" component={OrderScreen} />
 						<Route component={Page404} />
 					</Switch>
 				</Router>

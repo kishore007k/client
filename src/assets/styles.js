@@ -30,6 +30,12 @@ export const COLORS = {
 	adminActiveIconColor: "#DDDCFF",
 	gitHubLinks: "#2D98FF",
 	gitHubGo: "#00ADD8",
+	admin: {
+		productsBg: "#EFEEFF",
+		categoriesBg: "#FEEDED",
+		customerBg: "#EAF0FE",
+		averageOrdersBg: "#FEF4EC",
+	},
 };
 
 export const FONTS = {
