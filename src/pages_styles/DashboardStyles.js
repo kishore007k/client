@@ -31,7 +31,7 @@ export const DashboardTopCardImage = styled.div`
 	border-radius: 10px;
 
 	svg {
-		width: 70px;
+		width: 50px;
 		fill: ${(props) => (props.color ? props.color : "")};
 	}
 `;

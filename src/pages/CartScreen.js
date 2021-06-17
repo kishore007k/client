@@ -28,6 +28,8 @@ import ProductFour from "../assets/images/cart/p4.png";
 import { BackIcon, CloseIcon } from "../assets/icons";
 import { COLORS } from "../assets/styles";
 
+import { Helmet } from "react-helmet";
+
 import { Link } from "react-router-dom";
 
 const headings = [
@@ -109,114 +111,119 @@ const CartScreen = () => {
 	const [activePO, setActivePO] = useState("Credit/Debit Card");
 
 	return (
-		<CartWrapper>
-			<CartBackIcon>
-				<Link to="/">
-					<BackIcon color={COLORS.mediumBlack} /> Continue Shopping
-				</Link>
-			</CartBackIcon>
-			<CartMain>
-				<CartCartCart>
-					<CartCart>
-						<h3>shopping cart</h3>
-						<div>
-							<CardGrid>
-								{headings.map((item, index) => (
-									<CartHeadings key={index}>{item.title}</CartHeadings>
-								))}
-							</CardGrid>
+		<>
+			<Helmet>
+				<title>E Commerce Site | Cart</title>
+			</Helmet>
+			<CartWrapper>
+				<CartBackIcon>
+					<Link to="/">
+						<BackIcon color={COLORS.mediumBlack} /> Continue Shopping
+					</Link>
+				</CartBackIcon>
+				<CartMain>
+					<CartCartCart>
+						<CartCart>
+							<h3>shopping cart</h3>
 							<div>
-								{data.map((item, index) => (
-									<CartGridView key={index}>
-										<CartProductImage image={item.product} />
-										<div>
-											<p>{item.details}</p>
-										</div>
-										<div>
-											<span>{item.qty}</span>
-										</div>
-										<div>
-											<span>{item.cost}</span>
-										</div>
-										<CartCloseIcon>
-											<CloseIcon color={COLORS.darkGrey} />
-										</CartCloseIcon>
-									</CartGridView>
-								))}
+								<CardGrid>
+									{headings.map((item, index) => (
+										<CartHeadings key={index}>{item.title}</CartHeadings>
+									))}
+								</CardGrid>
+								<div>
+									{data.map((item, index) => (
+										<CartGridView key={index}>
+											<CartProductImage image={item.product} />
+											<div>
+												<p>{item.details}</p>
+											</div>
+											<div>
+												<span>{item.qty}</span>
+											</div>
+											<div>
+												<span>{item.cost}</span>
+											</div>
+											<CartCloseIcon>
+												<CloseIcon color={COLORS.darkGrey} />
+											</CartCloseIcon>
+										</CartGridView>
+									))}
+								</div>
 							</div>
-						</div>
-					</CartCart>
-					<CartTotalContainer>
-						<h3>Total: </h3>
-						<h4>₹ 78,500/-</h4>
-					</CartTotalContainer>
-				</CartCartCart>
-				<CartRightSideCardContainer>
-					<CartRightSideCard>
-						<h1>Shipping Details</h1>
-						<div>
-							<h3>Address</h3>
-							<CartRSAddress>
-								2924,Washington Street, Port Lavaca State TX, Texas-77979.
-							</CartRSAddress>
-						</div>
-						<div>
-							<h3>Mobile Number</h3>
-							<CartRSPhoneNo>361-482-6348</CartRSPhoneNo>
-						</div>
-						<div>
-							<h3>Shipping Method</h3>
-							<RadioBtnWrapper>
-								{deliveryOptions.map((item, index) => (
-									<label className="rad-label" key={index}>
-										<input
-											type="radio"
-											className="rad-input"
-											checked={activeDO === item.option ? true : false}
-											onChange={() => setActiveDO(item.option)}
-										/>
-										<div className="rad-design"></div>
-										<div className="rad-text">{item.option}</div>
-									</label>
-								))}
-							</RadioBtnWrapper>
-						</div>
-						<div>
-							<h3>Payment Method</h3>
-							<RadioBtnWrapper>
-								{paymentOptions.map((item, index) => (
-									<label className="rad-label" key={index}>
-										<input
-											type="radio"
-											className="rad-input"
-											checked={activePO === item.option ? true : false}
-											onChange={() => setActivePO(item.option)}
-										/>
-										<div className="rad-design"></div>
-										<div className="rad-text">{item.option}</div>
-									</label>
-								))}
-							</RadioBtnWrapper>
-						</div>
-						<div>
-							<h3>Coupon Code</h3>
-							<CartCouponInputContainer>
-								<CartCouponInput
-									type="text"
-									onChange={(e) => setCoupon(e.target.value)}
-									value={coupon}
-								/>
-							</CartCouponInputContainer>
-						</div>
-					</CartRightSideCard>
-					<BuyNowBtnContainer>
-						<Link to="/cart/payment">
-							<button>Buy Now</button>
-						</Link>
-					</BuyNowBtnContainer>
-				</CartRightSideCardContainer>
-			</CartMain>
-		</CartWrapper>
+						</CartCart>
+						<CartTotalContainer>
+							<h3>Total: </h3>
+							<h4>₹ 78,500/-</h4>
+						</CartTotalContainer>
+					</CartCartCart>
+					<CartRightSideCardContainer>
+						<CartRightSideCard>
+							<h1>Shipping Details</h1>
+							<div>
+								<h3>Address</h3>
+								<CartRSAddress>
+									2924,Washington Street, Port Lavaca State TX, Texas-77979.
+								</CartRSAddress>
+							</div>
+							<div>
+								<h3>Mobile Number</h3>
+								<CartRSPhoneNo>361-482-6348</CartRSPhoneNo>
+							</div>
+							<div>
+								<h3>Shipping Method</h3>
+								<RadioBtnWrapper>
+									{deliveryOptions.map((item, index) => (
+										<label className="rad-label" key={index}>
+											<input
+												type="radio"
+												className="rad-input"
+												checked={activeDO === item.option ? true : false}
+												onChange={() => setActiveDO(item.option)}
+											/>
+											<div className="rad-design"></div>
+											<div className="rad-text">{item.option}</div>
+										</label>
+									))}
+								</RadioBtnWrapper>
+							</div>
+							<div>
+								<h3>Payment Method</h3>
+								<RadioBtnWrapper>
+									{paymentOptions.map((item, index) => (
+										<label className="rad-label" key={index}>
+											<input
+												type="radio"
+												className="rad-input"
+												checked={activePO === item.option ? true : false}
+												onChange={() => setActivePO(item.option)}
+											/>
+											<div className="rad-design"></div>
+											<div className="rad-text">{item.option}</div>
+										</label>
+									))}
+								</RadioBtnWrapper>
+							</div>
+							<div>
+								<h3>Coupon Code</h3>
+								<CartCouponInputContainer>
+									<CartCouponInput
+										type="text"
+										onChange={(e) => setCoupon(e.target.value)}
+										value={coupon}
+									/>
+								</CartCouponInputContainer>
+							</div>
+						</CartRightSideCard>
+						<BuyNowBtnContainer>
+							<Link to="/cart/payment">
+								<button>Buy Now</button>
+							</Link>
+						</BuyNowBtnContainer>
+					</CartRightSideCardContainer>
+				</CartMain>
+			</CartWrapper>
+		</>
 	);
 };
 

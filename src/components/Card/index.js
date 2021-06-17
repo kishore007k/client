@@ -31,7 +31,7 @@ const Card = ({ image, title, desc, stat, price, stars, reviewCount }) => {
 				<CardDesc>{desc}</CardDesc>
 				<CardStat>
 					<Stat>{stat}</Stat>
-					<CardPrice>{price}</CardPrice>
+					<CardPrice>₹{price}/-</CardPrice>
 				</CardStat>
 			</div>
 		</CardCard>

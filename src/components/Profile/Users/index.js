@@ -36,6 +36,8 @@ import { COLORS } from "../../../assets/styles";
 import OrderImage from "../../../assets/images/slide/pic1.jpg";
 import CustomTable from "../../CustomTable";
 
+import { Helmet } from "react-helmet";
+
 const UserProfile = () => {
 	const localUserDataJson = JSON.parse(localStorage.getItem("user"));
 	const dispatch = useDispatch();
@@ -87,7 +89,10 @@ const UserProfile = () => {
 	const CurrentState = "onProgress";
 
 	return (
-		<div>
+		<>
+			<Helmet>
+				<title>E Commerce Site | {user.userName}</title>
+			</Helmet>
 			<Header color={COLORS.profileNav} />
 			<div style={{ marginTop: "80px" }}>
 				<BackCurveContainer>
@@ -186,7 +191,7 @@ const UserProfile = () => {
 				</ProfilePageContainer>
 			</div>
 			<Footer />
-		</div>
+		</>
 	);
 };
 

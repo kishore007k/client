@@ -14,6 +14,8 @@ import { FilterIcon, SortIcon } from "../assets/icons";
 import { COLORS, FONTS } from "../assets/styles";
 import { SearchIcon } from "../assets/icons/Header Icons";
 
+import { Helmet } from "react-helmet";
+
 const data = [
 	{
 		title: "ROG Strix GT 4X",
@@ -219,7 +221,10 @@ const ProductScreen = () => {
 	const [search, setSearch] = useState("");
 
 	return (
-		<div>
+		<>
+			<Helmet>
+				<title>E Commerce Site | Products</title>
+			</Helmet>
 			<Header />
 			<ProductPageWrapper>
 				<ActionBtnContainer>
@@ -245,7 +250,7 @@ const ProductScreen = () => {
 				</div>
 			</ProductPageWrapper>
 			<Footer />
-		</div>
+		</>
 	);
 };
 

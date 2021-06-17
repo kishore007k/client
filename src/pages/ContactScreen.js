@@ -4,9 +4,14 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { CSInnerDiv, CSWrapper } from "../pages_styles/ContactScreenStyle";
 
+import { Helmet } from "react-helmet";
+
 const ContactScreen = () => {
 	return (
 		<>
+			<Helmet>
+				<title>E Commerce Site | Contact</title>
+			</Helmet>
 			<Header />
 			<CSWrapper>
 				<h1>How can we help?</h1>

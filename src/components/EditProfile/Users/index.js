@@ -20,6 +20,8 @@ import {
 import { BackCurve } from "../../../assets/icons";
 import { useHistory } from "react-router";
 
+import { Helmet } from "react-helmet";
+
 const EditUserProfile = () => {
 	const localUserDataJson = JSON.parse(localStorage.getItem("user"));
 	const userData = JSON.parse(localStorage.getItem("userData"));
@@ -81,7 +83,10 @@ const EditUserProfile = () => {
 	}, [id, dispatch]);
 
 	return (
-		<div>
+		<>
+			<Helmet>
+				<title>E Commerce Site | Edit {userName}</title>
+			</Helmet>
 			<Header />
 			<BackCurveContainer>
 				<BackCurve />
@@ -177,7 +182,7 @@ const EditUserProfile = () => {
 				<EPUpdateBtn onClick={UpdateUser}>Update</EPUpdateBtn>
 			</EditProfileContainer>
 			<Footer />
-		</div>
+		</>
 	);
 };
 

@@ -26,6 +26,7 @@ import {
 	Span,
 	ForgotSpan,
 } from "../utils/FormStyle";
+import { Helmet } from "react-helmet";
 
 const LoginScreen = () => {
 	const dispatch = useDispatch();
@@ -50,6 +51,9 @@ const LoginScreen = () => {
 
 	return (
 		<>
+			<Helmet>
+				<title>E Commerce Site | Login</title>
+			</Helmet>
 			<Header />
 			<LoginScreenWrapper>
 				<Wrapper>

@@ -28,6 +28,8 @@ import {
 	PasswordInput,
 } from "../utils/FormStyle";
 
+import { Helmet } from "react-helmet";
+
 const SignUpScreen = () => {
 	const dispatch = useDispatch();
 
@@ -55,6 +57,9 @@ const SignUpScreen = () => {
 
 	return (
 		<>
+			<Helmet>
+				<title>E Commerce Site | SignUp</title>
+			</Helmet>
 			<Header />
 			<SignUpScreenWrapper>
 				<SignUpWrapper>

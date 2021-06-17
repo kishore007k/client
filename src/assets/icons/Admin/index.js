@@ -171,16 +171,14 @@ export const AverageOrders = () => {
 
 export const CopyIcon = () => {
 	return (
-		<svg viewBox="0 0 35 35">
+		<svg viewBox="0 0 35 35" fill="none">
 			<path
 				d="M23.334 5.833h2.916a2.917 2.917 0 012.917 2.917v20.417a2.917 2.917 0 01-2.917 2.916H8.75a2.917 2.917 0 01-2.917-2.916V8.75A2.917 2.917 0 018.75 5.833h2.917"
-				strokeWidth={2}
 				strokeLinecap="round"
 				strokeLinejoin="round"
 			/>
 			<path
 				d="M21.875 2.917h-8.75c-.806 0-1.459.653-1.459 1.458v2.917c0 .805.653 1.458 1.459 1.458h8.75c.805 0 1.458-.653 1.458-1.458V4.375c0-.805-.653-1.458-1.458-1.458z"
-				strokeWidth={2}
 				strokeLinecap="round"
 				strokeLinejoin="round"
 			/>

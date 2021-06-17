@@ -41,6 +41,8 @@ import PicTwo from "../assets/images/slide/pic2.jpg";
 import PicThree from "../assets/images/slide/pic3.jpg";
 import PicFour from "../assets/images/slide/pic4.jpg";
 
+import { Helmet } from "react-helmet";
+
 const ProductDetailScreen = (props) => {
 	const {
 		product: { image, desc, stars, title, price, reviewCount, stat },
@@ -106,6 +108,9 @@ const ProductDetailScreen = (props) => {
 
 	return (
 		<>
+			<Helmet>
+				<title>E Commerce Site | {title}</title>
+			</Helmet>
 			<Header />
 			<Wrapper>
 				<ProImageContainer>

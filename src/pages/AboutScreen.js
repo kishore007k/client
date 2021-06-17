@@ -30,9 +30,14 @@ import {
 } from "../pages_styles/AboutScreenStyles";
 import { COLORS } from "../assets/styles";
 
+import { Helmet } from "react-helmet";
+
 const AboutScreen = () => {
 	return (
-		<div>
+		<>
+			<Helmet>
+				<title>E Commerce Site | About</title>
+			</Helmet>
 			<Header image={BgImage} />
 			<BackGImage image={BgImage} />
 			<TopOfBg>
@@ -111,7 +116,7 @@ const AboutScreen = () => {
 				</ASCallOutBottomMain>
 			</ASCallOutBottom>
 			<Footer />
-		</div>
+		</>
 	);
 };
 
