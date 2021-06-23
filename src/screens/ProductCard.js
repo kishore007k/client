@@ -8,7 +8,7 @@ const ProductCard = ({ data }) => {
 		<CardContainer>
 			{data.map((item, index) => (
 				<Link
-					to={{ pathname: `/products/${item.title}`, state: { product: item } }}
+					to={{ pathname: `/products/${item.slug}`, state: { product: item } }}
 					key={index}
 				>
 					<Card

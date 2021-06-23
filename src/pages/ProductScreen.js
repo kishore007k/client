@@ -27,6 +27,7 @@ const data = [
 		category: "computer",
 		stars: 4,
 		reviewCount: 4201,
+		slug: "rog-strix-gt-4x",
 	},
 	{
 		title: "ROG Strix GT 4X",
@@ -38,6 +39,7 @@ const data = [
 		category: "computer",
 		stars: 3,
 		reviewCount: 4201,
+		slug: "rog-strix-gt-4x",
 	},
 	{
 		title: "ROG Strix GT 4X",
@@ -49,6 +51,7 @@ const data = [
 		category: "computer",
 		stars: 4,
 		reviewCount: 4201,
+		slug: "rog-strix-gt-4x",
 	},
 	{
 		title: "ROG Strix GT 4X",
@@ -60,6 +63,7 @@ const data = [
 		category: "computer",
 		stars: 5,
 		reviewCount: 4201,
+		slug: "rog-strix-gt-4x",
 	},
 	{
 		title: "ROG Strix GT 4X",
@@ -71,6 +75,7 @@ const data = [
 		category: "computer",
 		stars: 1,
 		reviewCount: 4201,
+		slug: "rog-strix-gt-4x",
 	},
 	{
 		title: "ROG Strix GT 4X",
@@ -82,6 +87,7 @@ const data = [
 		category: "computer",
 		stars: 3,
 		reviewCount: 4201,
+		slug: "rog-strix-gt-4x",
 	},
 	{
 		title: "ROG Strix GT 4X",
@@ -93,6 +99,7 @@ const data = [
 		category: "computer",
 		stars: 4,
 		reviewCount: 4201,
+		slug: "rog-strix-gt-4x",
 	},
 	{
 		title: "ROG Strix GT 4X",
@@ -104,6 +111,7 @@ const data = [
 		category: "computer",
 		stars: 4,
 		reviewCount: 4201,
+		slug: "rog-strix-gt-4x",
 	},
 	{
 		title: "ROG Strix GT 4X",
@@ -115,6 +123,7 @@ const data = [
 		category: "computer",
 		stars: 5,
 		reviewCount: 4201,
+		slug: "rog-strix-gt-4x",
 	},
 	{
 		title: "ROG Strix GT 4X",
@@ -126,6 +135,7 @@ const data = [
 		category: "computer",
 		stars: 4,
 		reviewCount: 4201,
+		slug: "rog-strix-gt-4x",
 	},
 	{
 		title: "ROG Strix GT 4X",
@@ -137,6 +147,7 @@ const data = [
 		category: "computer",
 		stars: 2,
 		reviewCount: 4201,
+		slug: "rog-strix-gt-4x",
 	},
 	{
 		title: "ROG Strix GT 4X",
@@ -148,6 +159,7 @@ const data = [
 		category: "computer",
 		stars: 4,
 		reviewCount: 4201,
+		slug: "rog-strix-gt-4x",
 	},
 	{
 		title: "ROG Strix GT 4X",
@@ -159,6 +171,7 @@ const data = [
 		category: "computer",
 		stars: 4,
 		reviewCount: 4201,
+		slug: "rog-strix-gt-4x",
 	},
 	{
 		title: "ROG Strix GT 4X",
@@ -170,6 +183,7 @@ const data = [
 		category: "computer",
 		stars: 3,
 		reviewCount: 4201,
+		slug: "rog-strix-gt-4x",
 	},
 	{
 		title: "ROG Strix GT 4X",
@@ -181,6 +195,7 @@ const data = [
 		category: "computer",
 		stars: 4,
 		reviewCount: 4201,
+		slug: "rog-strix-gt-4x",
 	},
 	{
 		title: "ROG Strix GT 4X",
@@ -192,6 +207,7 @@ const data = [
 		category: "computer",
 		stars: 5,
 		reviewCount: 4201,
+		slug: "rog-strix-gt-4x",
 	},
 	{
 		title: "ROG Strix GT 4X",
@@ -203,6 +219,7 @@ const data = [
 		category: "computer",
 		stars: 4,
 		reviewCount: 4201,
+		slug: "rog-strix-gt-4x",
 	},
 	{
 		title: "ROG Strix GT 4X",
@@ -214,6 +231,7 @@ const data = [
 		category: "computer",
 		stars: 4,
 		reviewCount: 4201,
+		slug: "rog-strix-gt-4x",
 	},
 ];
 

@@ -10,7 +10,7 @@ const SimilarProCard = ({ product }) => {
 			{product.map((item, index) => (
 				<CardWrapper>
 					<Link
-						to={{ pathname: `/products/${item.title}`, state: { product: item } }}
+						to={{ pathname: `/products/${item.slug}`, state: { product: item } }}
 						key={index}
 					>
 						<img src={item.image[1]} alt={item.category} />

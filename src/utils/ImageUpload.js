@@ -47,7 +47,7 @@ const ImageUpload = ({
 				</DisplayImageContainer>
 			) : (
 				<Placeholder>
-					<UserProfilePlaceholder className="placeholder" />
+					<UserProfilePlaceholder />
 				</Placeholder>
 			)}
 			<Wrapper width={inputWidth} height={inputHeight}>
@@ -71,7 +71,7 @@ const Container = styled.div`
 const Placeholder = styled.div`
 	display: block;
 
-	.placeholder {
+	svg {
 		fill: ${COLORS.lightGreyText};
 		width: 250px;
 		height: auto;

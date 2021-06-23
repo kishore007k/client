@@ -26,6 +26,7 @@ const data = [
 		category: "computer",
 		stars: 4,
 		reviewCount: 4201,
+		slug: "rog-strix-gt-4x",
 	},
 	{
 		title: "ROG Strix GT 4X",
@@ -37,6 +38,7 @@ const data = [
 		category: "computer",
 		stars: 4,
 		reviewCount: 4201,
+		slug: "rog-strix-gt-4x",
 	},
 	{
 		title: "ROG Strix GT 4X",
@@ -48,6 +50,7 @@ const data = [
 		category: "computer",
 		stars: 4,
 		reviewCount: 4201,
+		slug: "rog-strix-gt-4x",
 	},
 	{
 		title: "ROG Strix GT 4X",
@@ -59,6 +62,7 @@ const data = [
 		category: "computer",
 		stars: 4,
 		reviewCount: 4201,
+		slug: "rog-strix-gt-4x",
 	},
 	{
 		title: "ROG Strix GT 4X",
@@ -70,6 +74,7 @@ const data = [
 		category: "computer",
 		stars: 4,
 		reviewCount: 4201,
+		slug: "rog-strix-gt-4x",
 	},
 	{
 		title: "ROG Strix GT 4X",
@@ -81,6 +86,7 @@ const data = [
 		category: "computer",
 		stars: 4,
 		reviewCount: 4201,
+		slug: "rog-strix-gt-4x",
 	},
 	{
 		title: "ROG Strix GT 4X",
@@ -92,6 +98,7 @@ const data = [
 		category: "computer",
 		stars: 4,
 		reviewCount: 4201,
+		slug: "rog-strix-gt-4x",
 	},
 	{
 		title: "ROG Strix GT 4X",
@@ -103,6 +110,7 @@ const data = [
 		category: "computer",
 		stars: 4,
 		reviewCount: 4201,
+		slug: "rog-strix-gt-4x",
 	},
 	{
 		title: "ROG Strix GT 4X",
@@ -114,6 +122,7 @@ const data = [
 		category: "computer",
 		stars: 4,
 		reviewCount: 4201,
+		slug: "rog-strix-gt-4x",
 	},
 	{
 		title: "ROG Strix GT 4X",
@@ -125,6 +134,7 @@ const data = [
 		category: "computer",
 		stars: 4,
 		reviewCount: 4201,
+		slug: "rog-strix-gt-4x",
 	},
 	{
 		title: "ROG Strix GT 4X",
@@ -136,6 +146,7 @@ const data = [
 		category: "computer",
 		stars: 4,
 		reviewCount: 4201,
+		slug: "rog-strix-gt-4x",
 	},
 	{
 		title: "ROG Strix GT 4X",
@@ -147,6 +158,7 @@ const data = [
 		category: "computer",
 		stars: 4,
 		reviewCount: 4201,
+		slug: "rog-strix-gt-4x",
 	},
 ];
 
@@ -174,7 +186,7 @@ const RecentlyViewed = () => {
 					{data.map((item, index) => (
 						<CardContainer key={index}>
 							<Link
-								to={{ pathname: `/products/${item.title}`, state: { product: item } }}
+								to={{ pathname: `/products/${item.slug}`, state: { product: item } }}
 							>
 								<Card
 									image={item.image[0]}
