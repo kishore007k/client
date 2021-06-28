@@ -108,17 +108,20 @@ export const createCategories = ({ cName, cImage, localToken }) => {
 		.catch((e) => console.log(e));
 };
 
-export const fetchAllCategories = ({ localToken, dispatch }) => {
+export const fetchAllCategories = ({ localToken, dispatch, setCategories }) => {
 	const config = {
 		headers: {
 			Authorization: "Bearer " + localToken,
 		},
 	};
 
-	axios
+	const response = axios
 		.get(`${URL}/api/categories`, config)
 		.then((res) => {
 			dispatch(getAllCategories(res.data));
+			setCategories(res.data);
 		})
 		.catch((e) => console.log(e));
+
+	return response;
 };

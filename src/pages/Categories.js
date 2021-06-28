@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import FileBase64 from "react-file-base64";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import styled from "styled-components";
 import { createCategories, fetchAllCategories } from "../api/Auth";
@@ -12,10 +12,10 @@ const Categories = () => {
 	const localToken = userData?.token;
 
 	const dispatch = useDispatch();
-	const categoriesList = useSelector((state) => state?.categories?.categories);
 
 	const [image, setImage] = useState("");
 	const [categoryName, setCategoryName] = useState("");
+	const [category, setCategories] = useState([]);
 
 	const handleCreateCategories = (e) => {
 		e.preventDefault();
@@ -23,8 +23,8 @@ const Categories = () => {
 	};
 
 	useEffect(() => {
-		fetchAllCategories({ localToken, dispatch });
-	}, [localToken, dispatch]);
+		fetchAllCategories({ localToken, dispatch, setCategories });
+	}, [localToken, dispatch, setCategories, category]);
 
 	return (
 		<Container>
@@ -42,12 +42,18 @@ const Categories = () => {
 					</CategoryNameAndInput>
 					<CategoryImage>
 						<h3>Category Image</h3>
-						<ImageUploaderDiv>
-							<InputContainer>
-								<span>Drag & Drop</span>
-								<FileBase64 onDone={(files) => setImage(files.base64)} />
-							</InputContainer>
-						</ImageUploaderDiv>
+						{image !== "" ? (
+							<div>
+								<CImage image={image} />
+							</div>
+						) : (
+							<ImageUploaderDiv>
+								<InputContainer>
+									<span>Drag & Drop</span>
+									<FileBase64 onDone={(files) => setImage(files.base64)} />
+								</InputContainer>
+							</ImageUploaderDiv>
+						)}
 					</CategoryImage>
 				</MainDiv>
 				<button onClick={handleCreateCategories}>Create</button>
@@ -55,7 +61,7 @@ const Categories = () => {
 			<SideWrapper>
 				<h3>List Of categories</h3>
 				<UnorderedList>
-					{categoriesList.map((category, index) => (
+					{category.map((category, index) => (
 						<li key={index}>
 							<span />
 							<div>
@@ -238,13 +244,11 @@ const UnorderedList = styled.ul`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
-	width: 100%;
+	width: 45%;
 
 	li {
 		display: flex;
 		align-items: center;
-		width: 100%;
 		margin-bottom: 10px;
 		color: ${COLORS.mediumBlack};
 		font-size: ${FONTS.fontSize.para};
@@ -280,4 +284,17 @@ const PImageContainer = styled.div`
 	background-repeat: no-repeat;
 	background-size: contain;
 	border-radius: 50%;
+`;
+
+const CImage = styled.div`
+	display: block;
+	width: 250px;
+	height: 250px;
+	background: url(${(props) => (props.image ? props.image : "")});
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	border-radius: 50%;
+	background-color: ${COLORS.BgShade};
+	filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.1));
 `;
