@@ -138,7 +138,7 @@ const ProductDetailScreen = (props) => {
 						<PriceAndTags>
 							<PriceAndStat>
 								<span>{stat}</span>
-								<h3>M.R.P {price}/-</h3>
+								<h3>M.R.P ₹{price}/-</h3>
 							</PriceAndStat>
 							<FlexBoxContainer>
 								<FlexBox>

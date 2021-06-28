@@ -22,7 +22,7 @@ const data = [
 		desc:
 			"Some Desc about the product and some features that this product has and how much it will be useful",
 		stat: "Best Selling",
-		price: "₹4400",
+		price: 4400,
 		category: "computer",
 		stars: 4,
 		reviewCount: 4201,
@@ -34,7 +34,7 @@ const data = [
 		desc:
 			"Some Desc about the product and some features that this product has and how much it will be useful",
 		stat: "Best Selling",
-		price: "₹4400",
+		price: 4400,
 		category: "computer",
 		stars: 4,
 		reviewCount: 4201,
@@ -46,7 +46,7 @@ const data = [
 		desc:
 			"Some Desc about the product and some features that this product has and how much it will be useful",
 		stat: "Best Selling",
-		price: "₹4400",
+		price: 4400,
 		category: "computer",
 		stars: 4,
 		reviewCount: 4201,
@@ -58,7 +58,7 @@ const data = [
 		desc:
 			"Some Desc about the product and some features that this product has and how much it will be useful",
 		stat: "Best Selling",
-		price: "₹4400",
+		price: 4400,
 		category: "computer",
 		stars: 4,
 		reviewCount: 4201,
@@ -70,7 +70,7 @@ const data = [
 		desc:
 			"Some Desc about the product and some features that this product has and how much it will be useful",
 		stat: "Best Selling",
-		price: "₹4400",
+		price: 4400,
 		category: "computer",
 		stars: 4,
 		reviewCount: 4201,
@@ -82,7 +82,7 @@ const data = [
 		desc:
 			"Some Desc about the product and some features that this product has and how much it will be useful",
 		stat: "Best Selling",
-		price: "₹4400",
+		price: 4400,
 		category: "computer",
 		stars: 4,
 		reviewCount: 4201,
@@ -94,7 +94,7 @@ const data = [
 		desc:
 			"Some Desc about the product and some features that this product has and how much it will be useful",
 		stat: "Best Selling",
-		price: "₹4400",
+		price: 4400,
 		category: "computer",
 		stars: 4,
 		reviewCount: 4201,
@@ -106,7 +106,7 @@ const data = [
 		desc:
 			"Some Desc about the product and some features that this product has and how much it will be useful",
 		stat: "Best Selling",
-		price: "₹4400",
+		price: 4400,
 		category: "computer",
 		stars: 4,
 		reviewCount: 4201,
@@ -118,7 +118,7 @@ const data = [
 		desc:
 			"Some Desc about the product and some features that this product has and how much it will be useful",
 		stat: "Best Selling",
-		price: "₹4400",
+		price: 4400,
 		category: "computer",
 		stars: 4,
 		reviewCount: 4201,
@@ -130,7 +130,7 @@ const data = [
 		desc:
 			"Some Desc about the product and some features that this product has and how much it will be useful",
 		stat: "Best Selling",
-		price: "₹4400",
+		price: 4400,
 		category: "computer",
 		stars: 4,
 		reviewCount: 4201,
@@ -142,7 +142,7 @@ const data = [
 		desc:
 			"Some Desc about the product and some features that this product has and how much it will be useful",
 		stat: "Best Selling",
-		price: "₹4400",
+		price: 4400,
 		category: "computer",
 		stars: 4,
 		reviewCount: 4201,
@@ -154,7 +154,7 @@ const data = [
 		desc:
 			"Some Desc about the product and some features that this product has and how much it will be useful",
 		stat: "Best Selling",
-		price: "₹4400",
+		price: 4400,
 		category: "computer",
 		stars: 4,
 		reviewCount: 4201,
