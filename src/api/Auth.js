@@ -1,6 +1,7 @@
 import axios from "axios";
 import {
 	forgotPassword,
+	getAllCategories,
 	getUserData,
 	loginUser,
 	logoutUser,
@@ -22,7 +23,6 @@ export const SignUp = ({
 	axios
 		.post(`${URL}/api/users/signUp`, { userName, email, password, cPassword })
 		.then((res) => {
-			console.log(res);
 			dispatch(registerUser(res));
 			return history.push("/login");
 		})
@@ -65,7 +65,6 @@ export const fetchUserDetail = ({ id, dispatch }) => {
 };
 
 export const forgotPass = ({ email, secretKey, dispatch }) => {
-	console.log(secretKey);
 	axios
 		.post(`${URL}/api/users/forgotPass/${email}/${secretKey}`, { email })
 		.then((res) => {
@@ -91,8 +90,35 @@ export const resetPass = ({
 			id,
 		})
 		.then((res) => {
-			console.log(res);
 			dispatch(resetPassword(res));
+		})
+		.catch((e) => console.log(e));
+};
+
+export const createCategories = ({ cName, cImage, localToken }) => {
+	const config = {
+		headers: {
+			Authorization: "Bearer " + localToken,
+		},
+	};
+
+	axios
+		.post(`${URL}/api/categories`, { cName, cImage }, config)
+		.then((res) => console.log(res))
+		.catch((e) => console.log(e));
+};
+
+export const fetchAllCategories = ({ localToken, dispatch }) => {
+	const config = {
+		headers: {
+			Authorization: "Bearer " + localToken,
+		},
+	};
+
+	axios
+		.get(`${URL}/api/categories`, config)
+		.then((res) => {
+			dispatch(getAllCategories(res.data));
 		})
 		.catch((e) => console.log(e));
 };

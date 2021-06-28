@@ -74,7 +74,8 @@ export const DSideBar = styled.div`
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	height: 100vh;
+	min-height: 100vh;
+	height: 100%;
 	padding-top: 100px;
 	padding-bottom: 20px;
 	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);

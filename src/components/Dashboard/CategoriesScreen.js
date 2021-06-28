@@ -1,6 +1,8 @@
 import React from "react";
 import DashboardCover from "./DashboardCover";
 
+import Categories from "../../pages/Categories";
+
 import { Helmet } from "react-helmet";
 
 const CategoriesScreen = () => {
@@ -10,7 +12,7 @@ const CategoriesScreen = () => {
 				<title>E Commerce Site | Categories</title>
 			</Helmet>
 			<div>
-				<h1>Categories Screen</h1>
+				<Categories />
 			</div>
 		</DashboardCover>
 	);

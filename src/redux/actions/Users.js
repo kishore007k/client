@@ -54,3 +54,10 @@ export const resetPassword = (message) => {
 		payload: message,
 	};
 };
+
+export const getAllCategories = (categories) => {
+	return {
+		type: ActionTypes.GET_ALL_CATEGORIES,
+		payload: categories,
+	};
+};
