@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { COLORS, FONTS } from "../../assets/styles";
+import { COLORS, DEVICE, FONTS } from "../../assets/styles";
 
 export const DashboardContainer = styled.div`
 	display: block;
@@ -87,6 +87,10 @@ export const DSBItems = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+
+	@media ${DEVICE.tablet} {
+		padding: 10px;
+	}
 `;
 
 export const DSBItem = styled.div`
@@ -152,6 +156,19 @@ export const DSBItem = styled.div`
 				}
 			`}
 	}
+
+	@media ${DEVICE.tablet} {
+		padding: 5px 10px;
+		margin-bottom: 15px;
+
+		svg {
+			width: 25px;
+		}
+
+		a {
+			font-size: ${FONTS.fontSize.para};
+		}
+	}
 `;
 
 export const DSBLogout = styled.button`
@@ -182,5 +199,18 @@ export const DSBLogout = styled.button`
 		display: block;
 		text-align: center;
 		letter-spacing: 0.2em;
+	}
+
+	@media ${DEVICE.tablet} {
+		padding: 5px 10px;
+
+		svg {
+			width: 25px;
+			margin-right: 5px;
+		}
+
+		p {
+			font-size: ${FONTS.fontSize.mediumText};
+		}
 	}
 `;

@@ -60,3 +60,21 @@ export const FONTS = {
 		secondary: `'Source Code Pro', monospace`,
 	},
 };
+
+const size = {
+	mobileM: "375px",
+	mobileL: "425px",
+	tablet: "768px",
+	laptop: "1024px",
+	laptopL: "1440px",
+	desktop: "2560px",
+};
+
+export const DEVICE = {
+	xs: `(max-width: ${size.mobileM})`,
+	sm: `(max-width: ${size.mobileL})`,
+	base: `(max-width: ${size.tablet})`,
+	md: `(max-width: ${size.laptop})`,
+	lg: `(max-width: ${size.laptopL})`,
+	xl: `(max-width: ${size.desktop})`,
+};

@@ -2,6 +2,7 @@ import React from "react";
 import DashboardCover from "./DashboardCover";
 
 import { Helmet } from "react-helmet";
+import AdminProductScreen from "../../pages/AdminProductScreen";
 
 const ProductsScreen = () => {
 	return (
@@ -10,7 +11,7 @@ const ProductsScreen = () => {
 				<title>E Commerce Site | Create Products</title>
 			</Helmet>
 			<div>
-				<h1>ProductsScreen</h1>
+				<AdminProductScreen />
 			</div>
 		</DashboardCover>
 	);
